@@ -4,6 +4,7 @@ import path from 'node:path';
 import MarkdownIt from 'markdown-it';
 import footnote from 'markdown-it-footnote';
 import matter from 'gray-matter';
+import katex from 'katex';
 
 const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const SRC = path.join(ROOT, 'articles');
@@ -32,6 +33,40 @@ const bySlug = new Map(articles.map((a) => [a.slug, a]));
 function makeMd() {
   const md = new MarkdownIt({ html: false, linkify: true, typographer: true });
   md.use(footnote);
+  // Math: $$...$$ blocks and $...$ inline, rendered to HTML by KaTeX at build time
+  const tex = (src, display) => katex.renderToString(src, { displayMode: display, throwOnError: false, output: 'html' });
+  md.block.ruler.before('fence', 'math_block', (state, start, end, silent) => {
+    const first = state.src.slice(state.bMarks[start] + state.tShift[start], state.eMarks[start]);
+    if (!first.startsWith('$$')) return false;
+    let body = first.slice(2), line = start;
+    if (body.trim().endsWith('$$') && body.trim().length > 2) body = body.trim().slice(0, -2);
+    else {
+      let found = false;
+      while (++line < end) {
+        const l = state.src.slice(state.bMarks[line] + state.tShift[line], state.eMarks[line]);
+        if (l.trim().endsWith('$$')) { body += '\n' + l.trim().slice(0, -2); found = true; break; }
+        body += '\n' + l;
+      }
+      if (!found) return false;
+    }
+    if (silent) return true;
+    const tok = state.push('math_block', 'div', 0);
+    tok.content = body; tok.map = [start, line + 1];
+    state.line = line + 1;
+    return true;
+  });
+  md.inline.ruler.after('escape', 'math_inline', (state, silent) => {
+    const src = state.src, pos = state.pos;
+    if (src[pos] !== '$' || src[pos + 1] === '$' || /\s/.test(src[pos + 1] || ' ')) return false;
+    let end = pos + 1;
+    while ((end = src.indexOf('$', end)) > 0 && src[end - 1] === '\\') end++;
+    if (end < 0 || /\s/.test(src[end - 1]) || /\d/.test(src[end + 1] || '')) return false;
+    if (!silent) { const tok = state.push('math_inline', 'span', 0); tok.content = src.slice(pos + 1, end); }
+    state.pos = end + 1;
+    return true;
+  });
+  md.renderer.rules.math_block = (t, i) => `<div class="math-display">${tex(t[i].content, true)}</div>\n`;
+  md.renderer.rules.math_inline = (t, i) => tex(t[i].content, false);
   // footnote output -> References section
   md.renderer.rules.footnote_block_open = () => '<section class="references" id="references"><h2>References</h2>\n<ol class="refs">\n';
   md.renderer.rules.footnote_block_close = () => '</ol>\n</section>\n';
@@ -128,7 +163,7 @@ function infobox(a) {
   return `<aside class="infobox"><div class="infobox-title">${esc(ib.title || a.title)}</div><table>${rows}</table></aside>`;
 }
 
-const page = ({ title, description, body, canonical }) => `<!doctype html>
+const page = ({ title, description, body, canonical, math = false }) => `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -139,6 +174,7 @@ ${description ? `<meta name="description" content="${esc(description)}">` : ''}
 <meta property="og:title" content="${esc(title)}">
 ${description ? `<meta property="og:description" content="${esc(description)}">` : ''}
 <link rel="canonical" href="https://wiki.enci.dev${canonical}">
+${math ? '<link rel="stylesheet" href="/katex/katex.min.css">' : ''}
 <style>${CSS}</style>
 </head>
 <body>
@@ -150,6 +186,11 @@ ${body}
 
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
+// KaTeX stylesheet + fonts, self-hosted
+const KATEX = path.join(ROOT, 'node_modules/katex/dist');
+fs.mkdirSync(path.join(OUT, 'katex/fonts'), { recursive: true });
+fs.copyFileSync(path.join(KATEX, 'katex.min.css'), path.join(OUT, 'katex/katex.min.css'));
+for (const f of fs.readdirSync(path.join(KATEX, 'fonts')).filter((f) => f.endsWith('.woff2'))) fs.copyFileSync(path.join(KATEX, 'fonts', f), path.join(OUT, 'katex/fonts', f));
 
 for (const a of articles) {
   const md = makeMd();
@@ -170,7 +211,7 @@ ${toc(tokens)}
 ${rest}
 </div>
 </main>`;
-  fs.writeFileSync(path.join(OUT, `${a.slug}.html`), page({ title: `${a.title} · wiki`, description: a.description, body, canonical: `/${a.slug}` }));
+  fs.writeFileSync(path.join(OUT, `${a.slug}.html`), page({ title: `${a.title} · wiki`, description: a.description, body, canonical: `/${a.slug}`, math: /class="katex/.test(html) }));
 }
 
 const list = [...articles].sort((x, y) => new Date(y.updated) - new Date(x.updated));

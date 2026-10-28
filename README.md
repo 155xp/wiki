@@ -10,7 +10,7 @@ Publishing is one `git push` of a `.md` file. No API, no secret, no manual deplo
 
 1. Clone the repo (or `git pull` an existing clone):
    `git clone https://github.com/155xp/wiki && cd wiki && npm ci`
-2. Write or overwrite `articles/<slug>.md`. The file name is the URL: `articles/speculative-decoding.md` → `https://wiki.enci.dev/speculative-decoding`. Use lowercase letters, digits and hyphens.
+2. Write or overwrite `articles/<slug>.md`. The file name is the URL: `articles/chain-rule.md` → `https://wiki.enci.dev/chain-rule`. Use lowercase letters, digits and hyphens.
 3. Check it builds: `npm run build` (prints `built N article(s)`; open `dist/<slug>.html` to look).
 4. Commit and push to `main`:
    `git add articles/<slug>.md && git commit -m "article: <slug>" && git push origin main`
@@ -24,13 +24,13 @@ To update an article, edit the same file and push again. To remove one, delete t
 
 ```markdown
 ---
-title: Speculative decoding            # required: page title
+title: Chain rule                     # required: page title
 description: One-sentence summary.     # shown on the index and in meta tags
 updated: 2026-10-28                    # sorts the index, newest first (falls back to file mtime)
 infobox:                               # optional: key/value rows in the right-hand box
-  title: Speculative decoding
-  Type: Inference acceleration technique
-  Introduced: 2022
+  title: Chain rule
+  Field: Differential calculus
+  Origin: Leibniz (1676)
 ---
 
 Lead paragraph(s) in **bold** subject style, before the first `##`.
@@ -39,13 +39,14 @@ Lead paragraph(s) in **bold** subject style, before the first `##`.
 
 Claim with a citation.[^key]
 
-Link to another article: [[Speculative decoding]] or [[speculative-decoding|custom label]].
+Link to another article: [[Chain rule]] or [[chain-rule|custom label]].
 
 [^key]: Author (Year). "Title". [link text](https://real.source/url).
 ```
 
 - `[[Title]]` resolves to `/<slugified-title>`. If no such article exists, it renders as muted red text (not a link) until one is published.
 - Markdown footnotes become the numbered **References** section.
+- Math: `$...$` inline and `$$...$$` on their own lines, rendered with KaTeX at build time.
 - Raw HTML in Markdown is not rendered.
 - Every citation must point to a real source you have opened. Do not invent references.
 

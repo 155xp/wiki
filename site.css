@@ -62,3 +62,8 @@ hr.footnotes-sep{display:none}
 .refs li > p{display:block}
 .refs .caret{color:var(--muted)}
 .footnote-backref{font-size:.8em;font-style:italic;font-weight:600}
+.math-display{overflow-x:auto;overflow-y:hidden;margin:.8em 0;padding:2px 0}
+.katex{font-size:1.08em}
+.infobox .katex{font-size:1em}
+.glossary dt{font-weight:700;color:var(--title);margin-top:.6em}
+.glossary dd{margin:0 0 0 1.6em}
