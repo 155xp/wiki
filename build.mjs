@@ -5,6 +5,9 @@ import MarkdownIt from 'markdown-it';
 import footnote from 'markdown-it-footnote';
 import matter from 'gray-matter';
 import katex from 'katex';
+import container from 'markdown-it-container';
+import mark from 'markdown-it-mark';
+import ins from 'markdown-it-ins';
 
 const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const SRC = path.join(ROOT, 'articles');
@@ -31,8 +34,33 @@ const bySlug = new Map(articles.map((a) => [a.slug, a]));
 
 // 2. Markdown renderer with [[wikilinks]] and heading ids
 function makeMd() {
-  const md = new MarkdownIt({ html: false, linkify: true, typographer: true });
+  const md = new MarkdownIt({ html: true, linkify: true, typographer: true });
   md.use(footnote);
+  // ==outer== and ++inner++ highlights (Obsidian shows ==x== as a highlight and ++x++ as plain text)
+  md.use(mark).use(ins);
+  md.renderer.rules.mark_open = () => '<mark class="hl-outer">';
+  md.renderer.rules.mark_close = () => '</mark>';
+  md.renderer.rules.ins_open = () => '<mark class="hl-inner">';
+  md.renderer.rules.ins_close = () => '</mark>';
+  // ::: blocks. Boxes: takeaways, note, compare (holds wrong + right). ::: details <summary> is collapsible.
+  for (const name of ['takeaways', 'note', 'compare', 'wrong', 'right', 'tips']) {
+    md.use(container, name, {
+      render: (tokens, idx) => {
+        if (tokens[idx].nesting !== 1) return '</div>\n';
+        const title = tokens[idx].info.trim().slice(name.length).trim();
+        const def = { wrong: 'Wrong', right: 'Right' }[name];
+        const head = title || def;
+        return `<div class="box box-${name}">${head ? `<div class="box-title">${md.utils.escapeHtml(head)}</div>` : ''}\n`;
+      },
+    });
+  }
+  md.use(container, 'details', {
+    render: (tokens, idx) => {
+      if (tokens[idx].nesting !== 1) return '</div></details>\n';
+      const summary = tokens[idx].info.trim().slice('details'.length).trim() || 'Show';
+      return `<details><summary>${md.utils.escapeHtml(summary)}</summary><div class="details-body">\n`;
+    },
+  });
   // Math: $$...$$ blocks and $...$ inline, rendered to HTML by KaTeX at build time
   const tex = (src, display) => katex.renderToString(src, { displayMode: display, throwOnError: false, output: 'html' });
   md.block.ruler.before('fence', 'math_block', (state, start, end, silent) => {

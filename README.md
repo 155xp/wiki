@@ -59,3 +59,25 @@ Link to another article: [[Chain rule]] or [[chain-rule|custom label]].
 - `publish.sh` copy + build + commit + push helper
 
 This v1 renderer is a stand-in. It will be replaced by the shared wiki renderer skill; the article format above stays the same.
+
+## Teaching blocks (learning articles)
+
+These all stay readable as plain Markdown in Obsidian.
+
+- `==outer==` and `++inner++` highlight the outer and inner parts in prose. In math, use `\color{orange}{…}` for outer and `\color{teal}{…}` for inner; the site remaps both to theme colors that work in light and dark.
+- `::: takeaways` … `:::` is a boxed summary. `::: tips` … `:::` is a plain box. `::: note Title` … `:::` is a box with a title.
+- Wrong vs right, side by side (stacked on phones):
+
+  ```
+  :::: compare Forgetting the inner derivative
+  ::: wrong
+  $\sin(x^2)' = \cos(x^2)$
+  :::
+  ::: right
+  $\sin(x^2)' = \cos(x^2)\cdot 2x$
+  :::
+  ::::
+  ```
+
+- `::: details Solution` … `:::` is a collapsed answer.
+- Raw HTML is allowed, so an inline `<figure class="diagram"><svg>…</svg></figure>` works. Use `currentColor`, `var(--inner)` and `var(--outer)` so diagrams follow light and dark.

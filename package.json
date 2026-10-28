@@ -13,7 +13,10 @@
     "gray-matter": "^4.0.3",
     "katex": "^0.19.1",
     "markdown-it": "^15.0.3",
-    "markdown-it-footnote": "^4.0.0"
+    "markdown-it-container": "^4.0.0",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-ins": "^4.0.0",
+    "markdown-it-mark": "^4.0.0"
   },
   "private": true,
   "engines": {

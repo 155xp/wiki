@@ -69,3 +69,36 @@ hr.footnotes-sep{display:none}
 .infobox .katex{font-size:1em}
 .glossary dt{font-weight:700;color:var(--title);margin-top:.6em}
 .glossary dd{margin:0 0 0 1.6em}
+/* teaching blocks */
+:root{--outer:#b3261e;--outer-bg:rgba(179,38,30,.10);--inner:#0b57d0;--inner-bg:rgba(11,87,208,.10);--good:#146c2e;--bad:#b3261e}
+@media (prefers-color-scheme:dark){:root{--outer:#f2b8b5;--outer-bg:rgba(242,184,181,.14);--inner:#a8c7fa;--inner-bg:rgba(168,199,250,.14);--good:#6dd58c;--bad:#f2b8b5}}
+mark.hl-outer{background:var(--outer-bg);color:var(--outer);border-radius:3px;padding:0 .2em}
+mark.hl-inner{background:var(--inner-bg);color:var(--inner);border-radius:3px;padding:0 .2em}
+.katex [style*="color:orange"]{color:var(--outer)!important}
+.katex [style*="color:teal"]{color:var(--inner)!important}
+.box{background:var(--box);border:1px solid var(--border);padding:10px 16px;margin:1em 0}
+.box-title{font-weight:700;color:var(--title);margin-bottom:4px}
+.box > p:last-child,.box > ul:last-child,.box > ol:last-child{margin-bottom:.2em}
+.box-compare{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:none;border:0;padding:0}
+.box-compare > .box{margin:0}
+.box-compare > .box-title{grid-column:1/-1;margin:0}
+.box-wrong{border-left:3px solid var(--bad)}
+.box-wrong .box-title{color:var(--bad)}
+.box-right{border-left:3px solid var(--good)}
+.box-right .box-title{color:var(--good)}
+details{background:var(--box);border:1px solid var(--border);padding:6px 14px;margin:.4em 0 1em}
+details summary{cursor:pointer;color:var(--link);font-weight:600}
+details[open] summary{margin-bottom:4px}
+figure.diagram{margin:1.2em 0;text-align:center}
+figure.diagram svg{max-width:100%;height:auto;color:var(--text)}
+figure.diagram figcaption{color:var(--muted);font-size:13.5px;margin-top:6px}
+/* quick-reference card: label above value, so math gets the full card width and never wraps or clips */
+.infobox{width:300px;max-width:100%;box-sizing:border-box;padding:8px 12px 10px}
+.infobox table,.infobox tbody,.infobox tr,.infobox th,.infobox td{display:block;width:auto}
+.infobox th{padding:8px 0 1px;font-size:12px;letter-spacing:.02em;color:var(--muted);font-weight:600}
+.infobox td{padding:0 0 6px;font-size:14px;border-bottom:1px solid var(--border)}
+.infobox tr:last-child td{border-bottom:0;padding-bottom:0}
+.infobox td .katex{white-space:nowrap;font-size:1.08em}
+.infobox td:has(.katex){overflow-x:auto;overflow-y:hidden}
+@media (max-width:720px){.box-compare{grid-template-columns:1fr}}
+@media (max-width:720px){.infobox{width:auto}}
