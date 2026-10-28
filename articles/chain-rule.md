@@ -34,7 +34,11 @@ $$\frac{dy}{dx} = \frac{dy}{du}\cdot\frac{du}{dx}$$
 
 For example, a car that uses $\tfrac{1}{30}$ gallon per mile and drives at 60 miles per hour burns fuel at
 
-$$\frac{\text{gallons}}{\text{hour}} = \frac{\text{gallons}}{\text{mile}}\cdot\frac{\text{miles}}{\text{hour}} = \frac{1}{30}\cdot 60 = 2 \text{ gallons per hour.}$$
+$$\frac{\text{gallons}}{\text{hour}} = \frac{\text{gallons}}{\text{mile}}\cdot\frac{\text{miles}}{\text{hour}}$$
+
+$$\frac{1}{30}\cdot 60 = 2$$
+
+so it uses 2 gallons per hour.
 
 Here gallons depend on miles, and miles depend on hours, so the rate of gallons per hour is the product of the two links.[^econgraphs]
 
@@ -107,7 +111,7 @@ The examples go from easy to hard.
 - Multiply:
 
 $$
-\frac{d}{dx}(3x+1)^5 = \color{orange}{5(}\color{teal}{3x+1}\color{orange}{)^4}\cdot\color{teal}{3} = 15(3x+1)^4
+\begin{aligned}\frac{d}{dx}(3x+1)^5 &= \color{orange}{5(}\color{teal}{3x+1}\color{orange}{)^4}\cdot\color{teal}{3} \\ &= 15(3x+1)^4\end{aligned}
 $$
 
 ### Example 2: sin(x²)
@@ -118,7 +122,7 @@ $$
 - Multiply:
 
 $$
-\frac{d}{dx}\sin(x^2) = \color{orange}{\cos(}\color{teal}{x^2}\color{orange}{)}\cdot\color{teal}{2x} = 2x\cos(x^2)
+\begin{aligned}\frac{d}{dx}\sin(x^2) &= \color{orange}{\cos(}\color{teal}{x^2}\color{orange}{)}\cdot\color{teal}{2x} \\ &= 2x\cos(x^2)\end{aligned}
 $$
 
 ### Example 3: eᶜᵒˢ ˣ
@@ -129,7 +133,7 @@ $$
 - Multiply:
 
 $$
-\frac{d}{dx}e^{\cos x} = \color{orange}{e^{\color{teal}{\cos x}}}\cdot\color{teal}{(-\sin x)} = -\sin x\, e^{\cos x}
+\begin{aligned}\frac{d}{dx}e^{\cos x} &= \color{orange}{e^{\color{teal}{\cos x}}}\cdot\color{teal}{(-\sin x)} \\ &= -\sin x\, e^{\cos x}\end{aligned}
 $$
 
 ### Example 4: √(sin 4x), a chain of three
@@ -142,7 +146,7 @@ Here there are three layers: a square root, of a sine, of $4x$. Peel them from t
 - Multiply all three:
 
 $$
-\frac{d}{dx}\sqrt{\sin 4x} = \frac{1}{2\sqrt{\sin 4x}}\cdot\cos 4x\cdot 4 = \frac{2\cos 4x}{\sqrt{\sin 4x}}
+\begin{aligned}\frac{d}{dx}\sqrt{\sin 4x} &= \frac{1}{2\sqrt{\sin 4x}}\cdot\cos 4x\cdot 4 \\ &= \frac{2\cos 4x}{\sqrt{\sin 4x}}\end{aligned}
 $$
 
 ## Common mistakes
