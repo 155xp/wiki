@@ -5,7 +5,9 @@
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--page);color:var(--text);font:16px/1.6 var(--sans);overflow-wrap:break-word}
 a{color:var(--link);text-decoration:none}
-a:hover{text-decoration:underline}
+@media (hover:hover){a:hover{text-decoration:underline}}
+a:focus-visible{outline:none;border-radius:2px;box-shadow:0 0 0 2px var(--page),0 0 0 4px var(--link)}
+a:focus:not(:focus-visible){outline:none}
 header.site{max-width:1000px;margin:0 auto;padding:20px 24px 0}
 .wordmark{font-family:var(--serif);font-size:24px;color:var(--title);letter-spacing:.01em}
 .wordmark:hover{text-decoration:none}

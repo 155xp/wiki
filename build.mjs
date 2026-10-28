@@ -219,5 +219,5 @@ const indexBody = `<main class="index">
 ${list.length ? `<ul class="articles">${list.map((a) => `<li><a class="t" href="/${a.slug}">${esc(a.title)}</a>${a.description ? `<span class="d">${esc(a.description)}</span>` : ''}<time datetime="${isoDate(a.updated)}">${fmtDate(a.updated)}</time></li>`).join('\n')}</ul>` : '<p class="empty">No articles yet.</p>'}
 </main>`;
 fs.writeFileSync(path.join(OUT, 'index.html'), page({ title: 'wiki', description: 'Articles', body: indexBody, canonical: '/' }));
-fs.writeFileSync(path.join(OUT, '404.html'), page({ title: 'Not found · wiki', description: '', body: '<main class="index"><p class="empty">No article at this address. <a href="/">All articles</a></p></main>', canonical: '/' }));
+fs.writeFileSync(path.join(OUT, '404.html'), page({ title: 'Not found · wiki', description: '', body: '<main class="index"><p class="empty" id="nf">No article at this address.</p><p><a href="/">All articles</a></p><script>(function(){var s=decodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g,""));if(s){document.getElementById("nf").textContent="No article called \\u201c"+s.replace(/-/g," ")+"\\u201d.";}})();</script></main>', canonical: '/' }));
 console.log(`built ${articles.length} article(s) -> dist/`);
