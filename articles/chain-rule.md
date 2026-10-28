@@ -1,4 +1,5 @@
 ---
+visibility: public
 title: Chain rule
 description: How to take the derivative of a function inside another function, such as sin(x²) or (3x + 1)⁵. Take the derivative of the outside, then multiply by the derivative of the inside.
 updated: 2026-10-28

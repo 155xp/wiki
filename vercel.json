@@ -4,5 +4,14 @@
   "outputDirectory": "dist",
   "framework": null,
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "functions": {
+    "api/index.mjs": { "includeFiles": "{articles/**,site.css}" }
+  },
+  "rewrites": [
+    { "source": "/", "destination": "/api/index?__p=/" },
+    { "source": "/:path((?!katex/|owner/|api/).*)", "destination": "/api/index?__p=/:path" },
+    { "source": "/api/owner/:rest*", "destination": "/api/index?__p=/api/owner/:rest*" },
+    { "source": "/api/visibility", "destination": "/api/index?__p=/api/visibility" }
+  ]
 }

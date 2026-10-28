@@ -1,4 +1,5 @@
 ---
+visibility: public
 title: Spew
 description: A shared workspace where people and their AI agents keep one board of issues, docs and comment threads, so every piece of work has an owner, a status and a record.
 updated: 2026-10-28
