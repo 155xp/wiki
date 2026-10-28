@@ -37,8 +37,17 @@ function makeMd() {
   md.renderer.rules.footnote_block_close = () => '</ol>\n</section>\n';
   md.renderer.rules.footnote_caption = (tokens, idx) => {
     let n = Number(tokens[idx].meta.id + 1).toString();
-    if (tokens[idx].meta.subId > 0) n += ':' + tokens[idx].meta.subId;
     return n;
+  };
+  // Wikipedia-style backlinks: ^ for one use, ^ a b c for several
+  md.renderer.rules.footnote_anchor = (tokens, idx, options, env, slf) => {
+    let id = slf.rules.footnote_anchor_name(tokens, idx, options, env, slf);
+    const sub = tokens[idx].meta.subId;
+    if (sub > 0) id += ':' + sub;
+    const count = env.footnotes.list[tokens[idx].meta.id].count;
+    const label = count > 1 ? String.fromCharCode(97 + sub) : '^';
+    const caret = count > 1 && sub === 0 ? '<span class="caret">^</span> ' : '';
+    return ` ${caret}<a href="#fnref${id}" class="footnote-backref">${label}</a>`;
   };
   // [[target]] or [[target|label]]
   md.inline.ruler.before('link', 'wikilink', (state, silent) => {
@@ -144,8 +153,9 @@ fs.mkdirSync(OUT, { recursive: true });
 
 for (const a of articles) {
   const md = makeMd();
-  const tokens = md.parse(a.content, {});
-  const html = md.renderer.render(tokens, md.options, {});
+  const env = {};
+  const tokens = md.parse(a.content, env);
+  const html = md.renderer.render(tokens, md.options, env);
   // split lead (before first h2) from the rest so Contents sits after the lead, as on Wikipedia
   const firstH2 = html.search(/<h2[ >]/);
   const lead = firstH2 < 0 ? html : html.slice(0, firstH2);

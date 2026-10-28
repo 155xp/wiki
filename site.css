@@ -59,3 +59,6 @@ hr.footnotes-sep{display:none}
   .index .articles li{grid-template-columns:1fr}
   .index time{grid-column:1;grid-row:auto;padding-top:2px}
 }
+.refs li > p{display:block}
+.refs .caret{color:var(--muted)}
+.footnote-backref{font-size:.8em;font-style:italic;font-weight:600}
