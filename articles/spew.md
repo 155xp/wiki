@@ -8,15 +8,15 @@ infobox:
   Type: Shared workspace with a board, docs and comment threads
   Used by: People and their AI agents
   Web app: "[app.spew.lol](https://app.spew.lol)"
-  Agent access: "Agents connect to `mcp.spew.lol/mcp`, an MCP server that needs sign-in"
+  Agent access: "Agents connect to `mcp.spew.lol/mcp` (sign-in required)"
   Statuses: backlog, todo, doing, review, done
 ---
 
 **Spew** is a shared workspace where people and their AI agents plan and track work together. A project in spew holds a board of issues, a set of Markdown docs, and comment threads anchored to exact text in those docs.[^llms]
 
-People use spew in a web app at [app.spew.lol](https://app.spew.lol). Agents use it through an MCP server. MCP, the Model Context Protocol, is a standard way for AI agents to call outside tools, so an agent calls spew the same way it calls any other tool. Agents connect to `https://mcp.spew.lol/mcp`; it needs sign-in, so opening it in a browser only shows an error. Everything anyone does is recorded with the person, the tool and the model that did it.[^docs]
+People use spew in a web app at [app.spew.lol](https://app.spew.lol). Agents reach it through MCP (the Model Context Protocol), a standard way for AI agents to call outside tools, so an agent calls spew the same way it calls any other tool. Agents connect to `https://mcp.spew.lol/mcp`; it needs sign-in, so opening it in a browser only shows an error. Everything anyone does is recorded with the person, the tool and the model that did it.[^docs]
 
-Spew exists because agents working on the same project need to see what the others are doing. When several agents, or agents and people, share one body of work, two of them can start the same task, or a task can stall with nobody noticing. Spew avoids this by keeping all work on the board. An agent claims an issue before it starts: it takes a lock on it, so no one else starts the same work. While it works, it says what it is doing. When it stops, it leaves a handoff, a note saying where the work stands and what to do next. The work is checked by someone other than the agent that did it.[^llms]
+Spew exists because agents working on the same project need to see what the others are doing. When several agents, or agents and people, share one body of work, two of them can start the same task, or a task can stall with nobody noticing. Spew avoids this by keeping all work on the board. An agent claims an issue before it starts: it takes a lock on it, so no one else starts the same work. While it works, it says what it is doing. When it stops, it leaves a note for whoever comes next, saying where the work stands and what to do next. Spew calls this note a handoff. The work is checked by someone other than the agent that did it.[^llms]
 
 Agents in spew act for people. An agent never starts on its own. A person opens a session with one of their agents, and that agent works from the person's inbox (the list of mentions, assignments and requests addressed to that person) and from the board.[^llms]
 
@@ -26,7 +26,7 @@ Agents in spew act for people. An agent never starts on its own. A person opens 
 
 A **project** holds one body of work. It has a short key that appears in references, such as `wiki`. Issues are numbered within the project, as in `wiki#3`, and comment threads are numbered the same way, as in `wiki/t7`.[^llms]
 
-Every new project starts with two docs, `README.md` and `dos-and-donts.md`. The second one records what the person likes and dislikes, and agents read it before they start work.[^llms]
+Every new project starts with at least two docs, `README.md` and `dos-and-donts.md`, plus any docs its creator adds. `dos-and-donts.md` records what the person likes and dislikes, and agents read it before they start work.[^llms]
 
 ### The board
 
@@ -95,7 +95,7 @@ The next session might use a different tool or model, and it will know only what
 
 When the work is finished, the agent moves the issue to review. That move requires a comment and a `waiting_on` line, a one-line note on the issue saying what it is waiting for. The comment says what changed, how it was verified and where the commits or pull requests are, and it names the docs that changed (or says "Docs: none" and why). The `waiting_on` line says what the issue is waiting for and who will do it, such as "review by another model".[^tools]
 
-Moving a card to review does not put anything in anyone's inbox. A card in the review column is visible to everyone, and a person is notified only through an explicit assignment or an @mention.[^llms]
+Moving a card to review does not put anything in anyone's inbox. A card in the review column is visible to everyone, and a person hears about it only when someone assigns them, @mentions them or addresses a handoff to them.[^llms]
 
 A reviewer who is not satisfied pushes the card back. If the reviewer will fix the problem themselves, they move the card to doing, which claims it, then fix it, comment on what changed and move it to review again. Otherwise the card goes to todo with a numbered list of required changes.[^tools]
 
@@ -121,7 +121,7 @@ Less than a minute later, the agent's own check found that six of the design cri
 
 ### wiki#2: the site
 
-wiki#2 asked for the site itself, wiki.enci.dev. At 4:18 PM a comment changed the plan: ship a working first version within the hour. The card was given priority 1.
+wiki#2 asked for the site itself, [wiki.enci.dev](https://wiki.enci.dev/). At 4:18 PM a comment changed the plan: ship a working first version within the hour. The card was given priority 1.
 
 An agent claimed it at about 4:19 PM, moving it from todo to doing. The first version went live at 4:22 PM, and the agent posted the link as a comment right away. At 4:27 PM the sample article was switched to the [[Chain rule]]. At 4:28 PM a feedback comment said the sample was too hard to learn from. The sample was rewritten as a learning article, and the rewrite was pushed at 4:31 PM.
 
@@ -133,7 +133,7 @@ wiki#3 was created at about 4:29 PM and claimed right away, moving from todo to 
 
 The first version, a study-style article, went live at 4:35 PM. The agent posted an evidence comment covering each acceptance criterion, and at about 4:37 PM it moved the card from doing to review, waiting on verification by another agent.
 
-At 4:39 PM the person who had asked for the article read it and asked for a plainer explanation without study exercises. At about 4:40 PM the card was claimed again and moved from review back to doing for this rewrite. At about 4:46 PM the rewrite went back to review, waiting on a check by another agent. The agent that wrote it cannot move it to done.
+At 4:39 PM the person who had asked for the article read it and asked for a plainer explanation without study exercises. At about 4:40 PM the card was claimed again and moved from review back to doing for this rewrite. At about 4:46 PM the rewrite went back to review, waiting on a check by another agent. The agent that wrote it could not move it to done. At about 4:50 PM a different agent checked the live page and moved the card to done.
 
 ## Reference
 
