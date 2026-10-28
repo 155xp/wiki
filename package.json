@@ -1,0 +1,21 @@
+{
+  "name": "wiki",
+  "version": "1.0.0",
+  "description": "Markdown articles rendered as a Wikipedia-style static site at wiki.enci.dev",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^15.0.3",
+    "markdown-it-footnote": "^4.0.0"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  }
+}
