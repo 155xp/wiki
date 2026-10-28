@@ -2,19 +2,20 @@
 title: Chain rule
 description: How to take the derivative of a function inside another function, such as sin(x²) or (3x + 1)⁵. Take the derivative of the outside, then multiply by the derivative of the inside.
 updated: 2026-10-28
+visibility: public
 infobox:
   title: Chain rule, quick reference
   The rule: "$\\dfrac{d}{dx}f(g(x)) = f'(g(x))\\cdot g'(x)$"
   Memory phrase: Derivative of the outside, leave the inside alone, times the derivative of the inside.
   When to use it: A function sits inside another one, like a power, sine, root or exponential of something other than plain $x$.
-  Tiny example: "$\\dfrac{d}{dx}(2x+1)^3 = 3(2x+1)^2\\cdot 2$"
+  Tiny example: "The derivative of $(2x+1)^3$ is $3(2x+1)^2\\cdot 2$"
 ---
 
-The **chain rule** tells you how to take the [[derivative]] of a function that sits inside another function, such as $\sin(x^2)$ or $(3x+1)^5$.
+The **chain rule** tells you how to take the derivative of a function that sits inside another function, such as $\sin(x^2)$ or $(3x+1)^5$.
 
 In one line: **take the derivative of the outside function, leave the inside alone, then multiply by the derivative of the inside.**[^openstax]
 
-It is one of the basic differentiation rules in AP Calculus AB, alongside the [[power rule]], [[product rule]] and [[quotient rule]].[^apcentral]
+It is one of the basic differentiation rules in AP Calculus AB, alongside the power rule, product rule and quotient rule.[^apcentral]
 
 ## Intuition
 
@@ -26,6 +27,16 @@ Suppose three quantities are linked in a chain. $y$ depends on $u$, and $u$ depe
 - $y$ changes **3 times** as fast as $u$.
 
 Then $y$ changes $3 \times 2 = 6$ times as fast as $x$. **When rates are chained, they multiply.** That is the whole chain rule.
+
+Units show the same thing. Write each rate as a fraction with its units, and the middle unit cancels:
+
+$$\frac{dy}{dx} = \frac{dy}{du}\cdot\frac{du}{dx}$$
+
+For example, a car that uses $\tfrac{1}{30}$ gallon per mile and drives at 60 miles per hour burns fuel at
+
+$$\frac{\text{gallons}}{\text{hour}} = \frac{\text{gallons}}{\text{mile}}\cdot\frac{\text{miles}}{\text{hour}} = \frac{1}{30}\cdot 60 = 2 \text{ gallons per hour.}$$
+
+Here gallons depend on miles, and miles depend on hours, so the rate of gallons per hour is the product of the two links.[^econgraphs]
 
 Gears work the same way. If gear A turns gear B twice as fast, and gear B turns gear C three times as fast, then gear C spins six times as fast as gear A.
 
@@ -110,7 +121,7 @@ $$
 \frac{d}{dx}\sin(x^2) = \color{orange}{\cos(}\color{teal}{x^2}\color{orange}{)}\cdot\color{teal}{2x} = 2x\cos(x^2)
 $$
 
-### Example 3: e^(cos x)
+### Example 3: eᶜᵒˢ ˣ
 
 - Outer: ==e^(something)==. Inner: ++cos x++.
 - Derivative of the outer: $\color{orange}{e^{\color{teal}{\cos x}}}$ (the exponential is its own derivative)
@@ -256,7 +267,7 @@ $$
 
 ### Higher derivatives
 
-Taking the derivative of a composite function twice needs the chain rule and the product rule together.[^wikipedia] [[Faà di Bruno's formula]] gives the $n$th derivative in general.[^faadibruno]
+Taking the derivative of a composite function twice needs the chain rule and the product rule together.[^wikipedia] Faà di Bruno's formula gives the $n$th derivative in general.[^faadibruno]
 
 ## History
 
@@ -275,17 +286,11 @@ The first "modern" version of the rule is believed to appear in Joseph-Louis Lag
 - **Lagrange notation:** derivatives written with primes, as in $f'(x)$.
 - **Differentiable:** having a derivative at a point.
 
-## See also
-
-- [[Derivative]]
-- [[Product rule]]
-- [[Implicit differentiation]]
-- [[Integration by substitution]]
-
 [^openstax]: Strang, G.; Herman, E. (2016). "3.6 The Chain Rule". *Calculus Volume 1*. OpenStax. [openstax.org/books/calculus-volume-1/pages/3-6-the-chain-rule](https://openstax.org/books/calculus-volume-1/pages/3-6-the-chain-rule).
 [^wikipedia]: "Chain rule". *Wikipedia*. Retrieved 28 October 2026. [en.wikipedia.org/wiki/Chain_rule](https://en.wikipedia.org/wiki/Chain_rule).
 [^pauls3]: Dawkins, P. "Chain Rule". *Paul's Online Math Notes: Calculus III*. Lamar University. [tutorial.math.lamar.edu/Classes/CalcIII/ChainRule.aspx](https://tutorial.math.lamar.edu/Classes/CalcIII/ChainRule.aspx).
 [^rodriguez]: Rodríguez, O. H.; López Fernández, J. M. (2010). "A Semiotic Reflection on the Didactics of the Chain Rule". *The Mathematics Enthusiast*. 7 (2): 321–332. [scholarworks.umt.edu/tme/vol7/iss2/10](https://scholarworks.umt.edu/tme/vol7/iss2/10/).
-[^analyse]: "Analyse des infiniment petits pour l'intelligence des lignes courbes". *Wikipedia*. Retrieved 28 October 2026. [en.wikipedia.org](https://en.wikipedia.org/wiki/Analyse_des_infiniment_petits_pour_l%27intelligence_des_lignes_courbes). Scan of the 1716 edition: [archive.org/details/infinimentpetits1716lhos00uoft](https://archive.org/details/infinimentpetits1716lhos00uoft).
+[^analyse]: "Analyse des infiniment petits pour l'intelligence des lignes courbes". *Wikipedia*. Retrieved 28 October 2026. [en.wikipedia.org/wiki/Analyse_des_infiniment_petits_pour_l'intelligence_des_lignes_courbes](https://en.wikipedia.org/wiki/Analyse_des_infiniment_petits_pour_l%27intelligence_des_lignes_courbes). Scan of the 1716 edition: [archive.org/details/infinimentpetits1716lhos00uoft](https://archive.org/details/infinimentpetits1716lhos00uoft).
 [^faadibruno]: "Faà di Bruno's formula". *Wikipedia*. Retrieved 28 October 2026. [en.wikipedia.org/wiki/Faà_di_Bruno's_formula](https://en.wikipedia.org/wiki/Fa%C3%A0_di_Bruno%27s_formula).
 [^apcentral]: "AP Calculus AB". *AP Central*. College Board. [apcentral.collegeboard.org/courses/ap-calculus-ab](https://apcentral.collegeboard.org/courses/ap-calculus-ab).
+[^econgraphs]: "The Chain Rule". *EconGraphs*. [econgraphs.org/explanations/math/multivariable_calculus/chain_rule](https://www.econgraphs.org/explanations/math/multivariable_calculus/chain_rule).
