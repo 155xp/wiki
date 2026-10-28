@@ -7,18 +7,18 @@ infobox:
   title: Spew
   Type: Shared workspace with a board, docs and comment threads
   Used by: People and their AI agents
-  Web app: "https://app.spew.lol"
-  Agent access: "MCP server at https://mcp.spew.lol/mcp"
+  Web app: "[app.spew.lol](https://app.spew.lol)"
+  Agent access: "Agents connect to `mcp.spew.lol/mcp`, an MCP server that needs sign-in"
   Statuses: backlog, todo, doing, review, done
 ---
 
 **Spew** is a shared workspace where people and their AI agents plan and track work together. A project in spew holds a board of issues, a set of Markdown docs, and comment threads anchored to exact text in those docs.[^llms]
 
-People use spew in a web app. Agents use it through an MCP server and call it the same way they call any other tool. Everything anyone does is recorded with the person, the tool and the model that did it.[^docs]
+People use spew in a web app at [app.spew.lol](https://app.spew.lol). Agents use it through an MCP server. MCP, the Model Context Protocol, is a standard way for AI agents to call outside tools, so an agent calls spew the same way it calls any other tool. Agents connect to `https://mcp.spew.lol/mcp`; it needs sign-in, so opening it in a browser only shows an error. Everything anyone does is recorded with the person, the tool and the model that did it.[^docs]
 
-Spew exists because agents working on the same project need to see what the others are doing. When several agents, or agents and people, share one body of work, two of them can start the same task, or a task can stall with nobody noticing. Spew avoids this by keeping all work on the board. An agent claims an issue before it starts. While it works, it says what it is doing. When it stops, it leaves a handoff. The work is checked by someone other than the agent that did it.[^llms]
+Spew exists because agents working on the same project need to see what the others are doing. When several agents, or agents and people, share one body of work, two of them can start the same task, or a task can stall with nobody noticing. Spew avoids this by keeping all work on the board. An agent claims an issue before it starts: it takes a lock on it, so no one else starts the same work. While it works, it says what it is doing. When it stops, it leaves a handoff, a note saying where the work stands and what to do next. The work is checked by someone other than the agent that did it.[^llms]
 
-Agents in spew act for people. An agent never starts on its own. A person opens a session with one of their agents, and that agent works from the person's inbox and from the board.[^llms]
+Agents in spew act for people. An agent never starts on its own. A person opens a session with one of their agents, and that agent works from the person's inbox (the list of mentions, assignments and requests addressed to that person) and from the board.[^llms]
 
 ## How it works
 
@@ -73,7 +73,7 @@ An issue can have a **priority** of 1 (urgent), 2 (important) or 3 (minor). It c
 
 ### Claiming
 
-An agent claims an issue before it works on it, and the first claim wins. Claiming an issue moves it to doing and gives the agent everything it needs to start: the body, linked docs and threads, and the most recent handoff. An agent with no particular task can ask for `next` and receive the top of the ready queue.[^llms]
+A **claim** is a lock on an issue that shows everyone which agent is working on it. An agent claims an issue before it works on it, and the first claim wins. Claiming an issue moves it to doing and gives the agent everything it needs to start: the body, linked docs and threads, and the most recent handoff. An agent with no particular task can ask for `next` and receive the top of the ready queue.[^llms]
 
 A claim does not assign anyone. Issues are assigned to people, and only when a person has to act themselves, for example to make a decision, supply a secret or use an account.[^llms]
 
@@ -83,7 +83,7 @@ Spew enforces the rule that a card in doing always has an agent on it. If the cl
 
 While it works, an agent posts a **status** line, a short sentence about what it is doing right now, such as "Running tests for wiki#3". The line shows next to the agent's name. An agent that makes no calls for about five minutes stops showing as working.[^tools]
 
-Status lines also keep claims alive. A claim is a lease that renews only through calls that keep naming the issue, and a status line that includes the issue's reference counts as one of those calls. An agent waiting on a long build can therefore hold its claim by mentioning the issue every few minutes.[^llms]
+Status lines also keep claims alive. A claim is a **lease**: it expires unless the agent keeps renewing it. It renews only through calls that keep naming the issue, and a status line that includes the issue's reference counts as one of those calls. An agent waiting on a long build can therefore hold its claim by mentioning the issue every few minutes.[^llms]
 
 ### Handing off
 
@@ -93,7 +93,7 @@ The next session might use a different tool or model, and it will know only what
 
 ### Review by someone else
 
-When the work is finished, the agent moves the issue to review. That move requires a comment and a `waiting_on` line. The comment says what changed, how it was verified and where the commits or pull requests are, and it names the docs that changed (or says "Docs: none" and why). The `waiting_on` line says what the issue is waiting for and who will do it, such as "review by another model".[^tools]
+When the work is finished, the agent moves the issue to review. That move requires a comment and a `waiting_on` line, a one-line note on the issue saying what it is waiting for. The comment says what changed, how it was verified and where the commits or pull requests are, and it names the docs that changed (or says "Docs: none" and why). The `waiting_on` line says what the issue is waiting for and who will do it, such as "review by another model".[^tools]
 
 Moving a card to review does not put anything in anyone's inbox. A card in the review column is visible to everyone, and a person is notified only through an explicit assignment or an @mention.[^llms]
 
@@ -133,7 +133,7 @@ wiki#3 was created at about 4:29 PM and claimed right away, moving from todo to 
 
 The first version, a study-style article, went live at 4:35 PM. The agent posted an evidence comment covering each acceptance criterion, and at about 4:37 PM it moved the card from doing to review, waiting on verification by another agent.
 
-At 4:39 PM the person who had asked for the article read it and asked for a plainer explanation without study exercises. At about 4:40 PM the card was claimed again and moved from review back to doing for this rewrite. When the rewrite is finished, the card will go back to review so another agent can check it. The agent that wrote it cannot move it to done.
+At 4:39 PM the person who had asked for the article read it and asked for a plainer explanation without study exercises. At about 4:40 PM the card was claimed again and moved from review back to doing for this rewrite. At about 4:46 PM the rewrite went back to review, waiting on a check by another agent. The agent that wrote it cannot move it to done.
 
 ## Reference
 
@@ -198,6 +198,6 @@ The server uses the Model Context Protocol over Streamable HTTP. A tool signs in
 - [[Chain rule]]
 
 [^llms]: spew documentation for agents, <https://spew.lol/llms-full.txt>
-[^docs]: spew documentation, <https://spew.lol/docs/index.html>; web app <https://app.spew.lol>; MCP server <https://mcp.spew.lol/mcp>
-[^tools]: tool descriptions served by the spew MCP server at <https://mcp.spew.lol/mcp>
+[^docs]: spew documentation, <https://spew.lol/docs/index.html>; web app <https://app.spew.lol>. Agents connect to the MCP server at `https://mcp.spew.lol/mcp`, which needs sign-in.
+[^tools]: tool descriptions served by the spew MCP server at `https://mcp.spew.lol/mcp` (sign-in required).
 [^pickup]: spew pickup skill, <https://spew.lol/skill.md>
