@@ -15,7 +15,7 @@ infobox:
 
 This page gets you ready for the **quiz on sections 3.1 to 3.3**: the **chain rule**, **implicit differentiation**, and **derivatives of inverse functions**. It is no calculator, so every answer here works out by hand.
 
-Each topic has the same shape: **the move** (one line), then **worked examples**, then **the traps** that cost points. A practice quiz with 12 problems and a separate answer key is at the bottom.
+Each topic: the move, worked examples, traps. Practice quiz at the bottom.
 
 You already know the power, product and quotient rules. This page does not re-teach them. It only shows where the three new ideas plug in.
 
@@ -65,6 +65,8 @@ Common outsides, ready to use:
 4. Multiply and tidy up:
 
 $$y' = \color{orange}{5(}\color{teal}{3x^2+1}\color{orange}{)^4}\cdot\color{teal}{6x} = 30x(3x^2+1)^4$$
+
+($y'$ means $\dfrac{dy}{dx}$.)
 
 **Example 2.** Where does the power sit?
 
@@ -185,7 +187,7 @@ Values you can read off the graph:
 | $f(x)$ | 1 | 3 | 5 | 4.5 | 4 | 2 | 0 |
 | $f'(x)$ | 2 | 2 | does not exist | $-\dfrac{1}{2}$ | does not exist | $-2$ | $-2$ |
 
-The slopes at $x = 0$ and $x = 6$ are one-sided, since the graph ends there.
+The endpoint slopes at $x = 0$ and $x = 6$ are one-sided, since the graph ends there. Quiz questions only use $x$ values inside a segment.
 
 **Example 7.** $h(x) = f(3x)$. Find $h'(1)$.
 
@@ -243,7 +245,7 @@ Use this when $x$ and $y$ are mixed together, like $x^2 + y^2 = 25$, and you can
 Take $\dfrac{d}{dx}$ of both sides. Every time you differentiate something with $y$ in it, multiply by $\dfrac{dy}{dx}$. Then solve for $\dfrac{dy}{dx}$.
 :::
 
-Why the extra factor? $y$ is secretly a function of $x$, so every $y$ term is a chain rule. ==y== is the outside variable and the ++dy/dx++ is the inside derivative:
+Why the extra factor? $y$ is secretly a function of $x$, so every $y$ term is a chain rule. The power (or sin, or e^) is the ==outside==, ++y++ is the inside, so ++dy/dx++ is the inside derivative:
 
 $$\frac{d}{dx}\big[y^n\big] = ny^{n-1}\color{teal}{\frac{dy}{dx}} \qquad \frac{d}{dx}\big[\sin y\big] = \cos y\,\color{teal}{\frac{dy}{dx}} \qquad \frac{d}{dx}\big[e^y\big] = e^y\,\color{teal}{\frac{dy}{dx}}$$
 
@@ -292,7 +294,7 @@ $$2x + \underbrace{\left(y + x\frac{dy}{dx}\right)}_{\text{product rule on } xy}
 1. Differentiate: $\dfrac{dy}{dx} + \cos y\,\dfrac{dy}{dx} = 2$.
 2. Factor: $\dfrac{dy}{dx}(1 + \cos y) = 2$, so $\dfrac{dy}{dx} = \dfrac{2}{1 + \cos y}$.
 3. At $(0, 0)$: $\dfrac{2}{1 + 1} = 1$.
-4. Vertical tangents: bottom $= 0$ means $\cos y = -1$, for example $y = \pi$. The curve gives $2x = \pi + 0$, so the point $\left(\dfrac{\pi}{2}, \pi\right)$.
+4. Vertical tangents: bottom $= 0$ means $\cos y = -1$, for example $y = \pi$. The curve gives $2x = \pi + 0$, so one such point is $\left(\dfrac{\pi}{2}, \pi\right)$.
 
 ### Implicit traps
 
@@ -484,8 +486,6 @@ For problem 6, use the graph of $f$ from [the chain rule graph section](#chain-r
 **12.** Let $f(x) = x^5 + 2x^3 + x$. Write the equation of the line tangent to the graph of $f^{-1}$ at $x = 4$.
 
 ## Answer key
-
-Each answer is folded up. Open one only after you have tried the problem.
 
 ::: details 1. Answer
 **Answer: B.** $2\sin(3x)\cdot\cos(3x)\cdot 3 = 6\sin(3x)\cos(3x)$. Choice A forgot the inside factor of 3.
