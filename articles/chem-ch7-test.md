@@ -10,7 +10,7 @@ infobox:
   Core idea: "$F \\propto \\frac{q_1 q_2}{r^2}$"
   Ions: Cations lose 4s before 3d
   Trends: "Up and right: smaller, higher IE, higher EN"
-  Not on this test: Formal charge (Chapter 8)
+  May be on the test: Formal charge (Chapter 8)
 ---
 
 Nearly every question is one idea: **an electron is held tighter when it feels more positive charge and sits closer to the nucleus.**
@@ -19,7 +19,7 @@ Nearly every question is one idea: **an electron is held tighter when it feels m
 
 ### What is going on
 
-Light comes in packets called photons, and shorter wavelength means a bigger packet. In the photoelectric effect, one photon frees one electron, but only if that photon alone has enough energy. Any extra becomes the electron's speed.
+Light comes in packets called photons, and shorter wavelength means a bigger packet. In the photoelectric effect, one photon frees one electron only if that photon alone has enough energy.
 
 Hydrogen glows in only a few sharp colors, so its electron has fixed energy levels. A drop emits a photon equal to the gap. Bohr's formula fits one-electron atoms only.
 
@@ -140,8 +140,8 @@ To explain a trend, compare $Z_{\text{eff}}$ and distance, then state the attrac
 **Example 4.** Compare valence electrons in Na, Cl and K.
 
 1. **Na:** 11 protons minus 10 core gives about +1, in $n = 3$.
-2. **Cl:** 17 minus 10 gives about +7, same shell, so Cl holds tighter.
-3. **K:** 19 minus 18 gives about +1, but in $n = 4$. Farther out, so K holds looser.
+2. **Cl:** about +7, same shell, so tighter.
+3. **K:** 19 minus 18 is about +1, but in $n = 4$, so looser.
 
 ### Traps
 
@@ -167,7 +167,7 @@ More protons, same shell and shielding, so stronger attraction.
 
 ### What is going on
 
-**Across a period**, electrons join the same shell while $Z_{\text{eff}}$ rises, so atoms shrink. **Down a group**, each row adds a shell, so atoms grow. Cations lose their outer shell and shrink. Anions add repelling electrons, no protons, and swell. With equal electron counts, more protons means smaller.
+**Across a period**, electrons join the same shell while $Z_{\text{eff}}$ rises, so atoms shrink. **Down a group**, each row adds a shell, so atoms grow. Cations lose their outer shell and shrink; anions add repelling electrons and swell. With equal electron counts, more protons means smaller.
 
 ### Worked example
 
@@ -205,7 +205,7 @@ Ionization energy (IE) is the energy to remove a gaseous atom's outermost electr
 
 **Successive IEs** grow, since fewer electrons share the protons, then jump at the first core electron, which is closer and barely shielded.
 
-Two dips: **group 2 to 13** (Be to B, Mg to Al), where the first p electron is higher and shielded by the s pair; and **group 15 to 16** (N to O, P to S), where the first paired p electron is pushed by its partner.
+Two dips: **group 2 to 13** (Be to B, Mg to Al), where the first p electron is higher and shielded by the s pair; and **group 15 to 16** (N to O, P to S), where the first paired p electron is repelled by its partner.
 
 ### Worked example
 
@@ -239,7 +239,7 @@ Count the IEs **before** the jump: 2.
 
 ### What is going on
 
-**Electron affinity** is the energy change when a gaseous atom gains an electron. It generally gets more negative (more released) across a period as $Z_{\text{eff}}$ rises. Group 2, N and noble gases are near zero, since the newcomer must start a new subshell or pair up. Cl ($-349$ kJ/mol) beats F ($-328$) because tiny F is crowded.
+**Electron affinity** is the energy change when a gaseous atom gains an electron. It generally gets more negative (more released) across a period as $Z_{\text{eff}}$ rises. Group 2, N and noble gases are near zero: the newcomer must start a new subshell or pair up. Cl ($-349$ kJ/mol) beats F ($-328$) because tiny F is crowded.
 
 **Electronegativity** (EN) is an atom's pull on shared bonding electrons. It follows IE for the same reasons; F tops it at 3.98.
 
@@ -271,19 +271,60 @@ Cl does; crowding in F offsets its pull.
 :::
 ::::
 
+## Formal charge
+
+### What is going on
+
+Formal charge is bookkeeping, not a real charge. In a Lewis structure an atom "owns" its lone electrons plus half of each bond; owning more than its valence electrons makes it negative, fewer makes it positive.
+
+The best structure keeps formal charges nearest zero, since separated charge costs energy, and puts any negative charge on the more electronegative atom, which holds it best. The charges always sum to the overall charge.
+
+::: note The move
+$$\text{FC} = \text{valence} - \text{nonbonding } e^- - \tfrac12(\text{bonding } e^-)$$
+:::
+
+### Worked example
+
+**Example 8.** Pick the best SCN$^-$ structure. Valence: S 6, C 4, N 5.
+
+1. **[S=C=N]$^-$:** S is $6 - 4 - 2 = 0$, C is $4 - 0 - 4 = 0$, N is $5 - 4 - 2 = -1$.
+2. **[S≡C–N]$^-$:** S is $6 - 2 - 3 = +1$, N is $5 - 6 - 1 = -2$. Bigger charges, so worst.
+3. **[S–C≡N]$^-$:** S is $6 - 6 - 1 = -1$, N is 0. Each structure sums to $-1$.
+4. **Pick [S=C=N]$^-$.** Its $-1$ is on N (EN 3.04), not S (2.58).
+
+### Traps
+
+:::: compare Forgetting the half
+::: wrong
+C in [S=C=N]$^-$ owns all 8 bonding electrons: $4 - 0 - 8 = -4$.
+:::
+::: right
+It owns half of them: $4 - 0 - 4 = 0$.
+:::
+::::
+
+:::: compare Sum to zero
+::: wrong
+The formal charges in SCN$^-$ add to 0.
+:::
+::: right
+They add to $-1$, the ion's charge.
+:::
+::::
+
 ## Photoelectron spectroscopy (PES)
 
 ### What is going on
 
-PES knocks electrons out with photons and measures what each took to remove. Each peak is one **subshell**. Height is its electron count. Position is how tightly they are held; 1s is always highest. Mrs. Cascioli's graphs usually put **high energy on the left**, often on a log scale.
+PES measures the energy needed to remove each electron. Each peak is one **subshell**. Height is its electron count. Position is how tightly they are held; 1s is always highest. Mrs. Cascioli's graphs usually put **high energy on the left**, often on a log scale.
 
 ### Worked example
 
-**Example 8.** Peaks at 104, 6.84, 3.67 and 0.50 MJ/mol have heights 2 : 2 : 6 : 1. Identify the element.
+**Example 9.** Peaks at 104, 6.84, 3.67 and 0.50 MJ/mol have heights 2 : 2 : 6 : 1. Identify the element.
 
 1. **Label from highest energy:** 1s, 2s, 2p, 3s.
 2. **Add the heights:** $2 + 2 + 6 + 1 = 11$ electrons, so sodium.
-3. **Check:** the lowest peak, 0.50 MJ/mol, matches Na's first IE (496 kJ/mol).
+3. **Check:** 0.50 MJ/mol matches Na's first IE (496 kJ/mol).
 
 ### Traps
 
@@ -317,7 +358,7 @@ $$\text{average mass} = \sum \frac{\%\text{ abundance}}{100}\times\text{isotope 
 
 ### Worked example
 
-**Example 9.** Boron is $^{10}$B (10.013 amu) and $^{11}$B (11.009 amu), averaging 10.81 amu. Find the percent $^{10}$B.
+**Example 10.** Boron is $^{10}$B (10.013 amu) and $^{11}$B (11.009 amu), averaging 10.81 amu. Find the percent $^{10}$B.
 
 1. **Let $x$ be the $^{10}$B fraction:** $10.81 = 10.013x + 11.009(1 - x)$.
 2. **Solve:** $x = \dfrac{11.009 - 10.81}{0.996} = 0.200$, so 20.0%. It fits: 10.81 is near 11.
@@ -376,6 +417,13 @@ Br$_2$ shows two peaks, 158 and 162.
 - **C.** $n = 4$ to $n = 2$
 - **D.** $n = 1$ to $n = 3$
 
+**7.** (Multiple choice) Which OCN$^-$ structure is best?
+
+- **A.** [O=C=N]$^-$
+- **B.** [O≡C–N]$^-$
+- **C.** [O–C≡N]$^-$
+- **D.** All equal
+
 ## Answer key
 
 ::: details 1. Answer
@@ -387,7 +435,7 @@ Br$_2$ shows two peaks, 158 and 162.
 :::
 
 ::: details 3. Answer
-**Answer: B.** 1s$^2$ 2s$^2$ 2p$^6$ 3s$^2$ 3p$^2$ is 14 electrons, silicon.
+**Answer: B.** 14 electrons (1s$^2$ 2s$^2$ 2p$^6$ 3s$^2$ 3p$^2$) is silicon.
 :::
 
 ::: details 4. Answer
@@ -399,5 +447,9 @@ Br$_2$ shows two peaks, 158 and 162.
 :::
 
 ::: details 6. Answer
-**Answer: A.** It is the smallest emission gap, so the longest wavelength (656 nm); D is absorption.
+**Answer: A.** Smallest emission gap, so longest wavelength (656 nm); D is absorption.
+:::
+
+::: details 7. Answer
+**Answer: C.** Its only charge, $-1$, sits on O, the most electronegative atom; A puts it on N and B has $+1$ and $-2$.
 :::
