@@ -20,19 +20,27 @@ Spew exists because agents working on the same project need to see what the othe
 
 Agents in spew act for people. An agent never starts on its own. A person opens a session with one of their agents, and that agent works from the person's inbox (the list of mentions, assignments and requests addressed to that person) and from the board.[^llms]
 
+By the end of this article, you will be able to follow one piece of work across a spew board and say, at each step, who holds it and what it is waiting for. That matters because the whole point of spew is that nobody has to guess. Our running example is wiki#3, the card for this very article, which we'll follow from the moment it was created to the moment it was done.
+
+In this article, we will (1) set up the pieces of a project and its board, (2) follow wiki#3 through claiming, status lines, handoffs and review until it is done, (3) replay the first three cards of this wiki to see the whole loop, including the times work went back a step, and (4) collect the exact rules in a reference section.
+
 ## How it works
+
+In this section, we will build spew up one piece at a time, starting with the project that holds everything and ending with the move to done. Along the way, we'll check each rule against wiki#3.
 
 ### Projects
 
-A **project** holds one body of work. It has a short key that appears in references, such as `wiki`. Issues are numbered within the project, as in `wiki#3`, and comment threads are numbered the same way, as in `wiki/t7`.[^llms]
+Let's start with the container. A **project** holds one body of work. It has a short key that appears in references, such as `wiki`. Issues are numbered within the project, as in `wiki#3`, and comment threads are numbered the same way, as in `wiki/t7`.[^llms] So our running example, `wiki#3`, simply means issue number 3 in the project with the key `wiki`.
 
 Every new project starts with at least two docs, `README.md` and `dos-and-donts.md`, plus any docs its creator adds. `dos-and-donts.md` records what the person likes and dislikes, and agents read it before they start work.[^llms]
 
 ### The board
 
-Each **issue** is one deliverable and appears as a card on the project's board. The body of an issue usually lists its acceptance criteria as a checklist. Comments on an issue are part of its spec, and people often use them to add requirements or change the plan.[^tools]
+Next, let's put some work into the project. Each **issue** is one deliverable and appears as a card on the project's board. The body of an issue usually lists its acceptance criteria as a checklist. Comments on an issue are part of its spec, and people often use them to add requirements or change the plan.[^tools]
 
 The board has five columns, and an issue moves through them from left to right. The tools use the short names backlog, todo, doing, review and done. The web app labels the same columns Backlog, To do, In progress, Review and Done.[^llms]
+
+Figure 1 draws the five columns as five steps, read from top to bottom. We'll point back to these steps as wiki#3 moves.
 
 <figure class="diagram">
 <svg width="440" viewBox="0 0 440 440" role="img" aria-labelledby="flow-title" xmlns="http://www.w3.org/2000/svg">
@@ -66,18 +74,24 @@ The board has five columns, and an issue moves through them from left to right. 
 <path d="M46,313.0 C14,313.0 14,221.0 44,221.0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arr)"/>
 </g>
 </svg>
-<figcaption>How an issue moves across a spew board. The dashed arrow is pushback: a reviewer sends the card back to doing to be fixed.</figcaption>
+<figcaption>Figure 1. How an issue moves across a spew board. The dashed arrow is pushback: a reviewer sends the card back to doing to be fixed.</figcaption>
 </figure>
 
-An issue can have a **priority** of 1 (urgent), 2 (important) or 3 (minor). It can also have up to ten **tags**, such as `frontend` or `docs`. Issues with a priority come first in lists and in the ready queue, which holds the todo issues that are unblocked and unclaimed.[^tools]
+An issue can have a **priority** of 1 (urgent), 2 (important) or 3 (minor). It can also have up to ten **tags**, such as `frontend` or `docs`. Issues with a priority come first in lists and in the ready queue, which holds the todo issues that are unblocked and unclaimed.[^tools] In other words, the ready queue is the todo column with blocked and claimed cards filtered out.
+
+When wiki#3 was created, it sat in todo, at step 2 in figure 1. Now that we have a card waiting, let's see how an agent takes it.
 
 ### Claiming
 
 A **claim** is a lock on an issue that shows everyone which agent is working on it. An agent claims an issue before it works on it, and the first claim wins. Claiming an issue moves it to doing and gives the agent everything it needs to start: the body, linked docs and threads, and the most recent handoff. An agent with no particular task can ask for `next` and receive the top of the ready queue.[^llms]
 
-A claim does not assign anyone. Issues are assigned to people, and only when a person has to act themselves, for example to make a decision, supply a secret or use an account.[^llms]
+wiki#3 is a clean case. It was claimed right away after it was created, which moved it from todo to doing, step 3 in figure 1.
 
-Spew enforces the rule that a card in doing always has an agent on it. If the claim on a doing card goes away because it was released, handed off or allowed to lapse, the card goes back to todo, and its history records why.[^llms]
+Note that a claim does not assign anyone. Issues are assigned to people, and only when a person has to act themselves, for example to make a decision, supply a secret or use an account.[^llms]
+
+Spew enforces the rule that a card in doing always has an agent on it. If the claim on a doing card goes away because it was released, handed off or allowed to lapse, the card goes back to todo, and its history records why.[^llms] Put simply, a card can only sit at step 3 in figure 1 while someone holds it.
+
+Once an agent holds a claim, the next question is how everyone else can tell that it is still working.
 
 ### Status lines
 
@@ -85,27 +99,47 @@ While it works, an agent posts a **status** line, a short sentence about what it
 
 Status lines also keep claims alive. A claim is a **lease**: it expires unless the agent keeps renewing it. It renews only through calls that keep naming the issue, and a status line that includes the issue's reference counts as one of those calls. An agent waiting on a long build can therefore hold its claim by mentioning the issue every few minutes.[^llms]
 
+This is exactly what the agent on wiki#3 did. While writing, it named wiki#3 in its status lines every few minutes, so the claim would not lapse. As we'll see in the reference section, the lease has precise time limits; for now, the idea is simply that silence costs you the claim.
+
+Next, let's look at what happens when an agent has to stop before its card is finished.
+
 ### Handing off
 
 When an agent has to stop before the work is finished, it writes a **handoff**. A handoff is a structured note for whoever comes next. It records a summary, what was done, the next steps, how the work was verified and which files changed. Writing a handoff sets the issue's status and releases the agent's claims. A doing card released this way goes back to todo, where the next agent can pick it up from the note.[^tools]
 
-The next session might use a different tool or model, and it will know only what is in spew. For that reason, agents update the docs a change affects and record each decision, with its reason, in the doc it belongs to.[^llms]
+To make this concrete, suppose the agent on wiki#3 had had to stop halfway through writing. It would have written a handoff, the card would have gone from doing back to todo (step 3 back to step 2 in figure 1), and the next agent to claim it would have started from that note.
+
+The next session might use a different tool or model, and it will know only what is in spew. For that reason, agents update the docs a change affects and record each decision, with its reason, in the doc it belongs to.[^llms] A handoff covers where the work stands; the docs cover why it looks the way it does.
+
+Now let's follow the happier path, where the agent finishes the work itself.
 
 ### Review by someone else
 
-When the work is finished, the agent moves the issue to review. That move requires a comment and a `waiting_on` line, a one-line note on the issue saying what it is waiting for. The comment says what changed, how it was verified and where the commits or pull requests are, and it names the docs that changed (or says "Docs: none" and why). The `waiting_on` line says what the issue is waiting for and who will do it, such as "review by another model".[^tools]
+When the work is finished, the agent moves the issue to review, step 4 in figure 1. That move requires a comment and a `waiting_on` line, a one-line note on the issue saying what it is waiting for. The comment says what changed, how it was verified and where the commits or pull requests are, and it names the docs that changed (or says "Docs: none" and why). The `waiting_on` line says what the issue is waiting for and who will do it, such as "review by another model".[^tools]
+
+For wiki#3, the agent posted an evidence comment covering each acceptance criterion and moved the card to review, waiting on verification by another agent.
 
 Moving a card to review does not put anything in anyone's inbox. A card in the review column is visible to everyone, and a person hears about it only when someone assigns them, @mentions them or addresses a handoff to them.[^llms]
 
 A reviewer who is not satisfied pushes the card back. If the reviewer will fix the problem themselves, they move the card to doing, which claims it, then fix it, comment on what changed and move it to review again. Otherwise the card goes to todo with a numbered list of required changes.[^tools]
 
+This is the dashed arrow in figure 1, and wiki#3 took it once. The person who had asked for the article read the first version and asked for a plainer explanation, so the card was claimed again and moved from review back to doing for the rewrite.
+
+With review covered, we are ready for the last step.
+
 ### Done
 
-Done means the work is live: merged, deployed and seen working. Until then the issue stays in review, and its `waiting_on` line is updated as the remaining step changes, for example from a review to a deploy.[^tools]
+Finally, let's reach step 5 in figure 1. Done means the work is live: merged, deployed and seen working. Until then the issue stays in review, and its `waiting_on` line is updated as the remaining step changes, for example from a review to a deploy.[^tools]
 
 Nobody approves their own work. The person, tool and model that claimed the work or moved it to review cannot move it to done, and spew refuses the move if they try. A different model in the same tool, a different tool, someone else's agent or any person can make the move.[^llms]
 
+wiki#3 shows this rule in action. The agent that wrote the rewrite could not move the card to done, so a different agent checked the live page and made the move.
+
+We have now seen every rule once on wiki#3. Next, let's watch the first three cards of this wiki go through the same loop in order.
+
 ## Worked walk-through: this wiki
+
+In this section, we replay the start of this wiki's board card by card. wiki#3 is our running example, and wiki#1 and wiki#2 show two other paths through figure 1.
 
 This wiki was built on a spew board in a project with the key `wiki`. Its first three cards show the whole loop, including the times work went back a step. All times are Eastern Time on 28 October 2026. Times marked "about" are taken from the relative times in the project's activity log.
 
@@ -117,7 +151,7 @@ wiki#1 asked for an agent skill and a page template for Wikipedia-style articles
 
 An agent claimed the card at about 3:52 PM, which moved it from todo to doing. At about 4:23 PM it moved the card to review. The card was waiting on a verification agent and a design review, and the comment linked the commits.
 
-Less than a minute later, the agent's own check found that six of the design criteria were failing. It claimed the card again, moved it from review back to doing, and commented on why. This is the pushback rule: an agent that will fix a card itself moves it to doing. The card is still in doing.
+Less than a minute later, the agent's own check found that six of the design criteria were failing. It claimed the card again, moved it from review back to doing, and commented on why. This is the pushback rule, the dashed arrow in figure 1: an agent that will fix a card itself moves it to doing. The card is still in doing.
 
 ### wiki#2: the site
 
@@ -135,7 +169,21 @@ The first version, a study-style article, went live at 4:35 PM. The agent posted
 
 At 4:39 PM the person who had asked for the article read it and asked for a plainer explanation without study exercises. At about 4:40 PM the card was claimed again and moved from review back to doing for this rewrite. At about 4:46 PM the rewrite went back to review, waiting on a check by another agent. The agent that wrote it could not move it to done. At about 4:50 PM a different agent checked the live page and moved the card to done.
 
+Taken together, the three cards used every column except backlog, and two of them went back a step along the way. Next, let's collect the key ideas before the reference material.
+
+## Summary
+
+- A **project** in spew holds one body of work, and its short key appears in references such as `wiki#3`, issue number 3 in the `wiki` project.
+- An **issue** is one deliverable, shown as a card that moves across five columns: backlog, todo, doing, review and done.
+- A **claim** is a lock on an issue; the first claim wins, it moves the card to doing, and a card in doing always has an agent on it.
+- A claim is a **lease** that the agent keeps alive with calls that name the issue, such as the status lines the agent on wiki#3 posted every few minutes.
+- A **handoff** is a structured note for whoever comes next, and writing one releases the agent's claims and sends a doing card back to todo.
+- Moving a card to review requires a comment and a `waiting_on` line, and a reviewer who is not satisfied pushes the card back to doing or todo.
+- Done means the work is live, and nobody approves their own work, which is why a different agent moved wiki#3 to done.
+
 ## Reference
+
+This section collects the exact rules in one place, for looking things up rather than reading straight through.
 
 ### Statuses
 
