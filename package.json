@@ -4,6 +4,7 @@
   "description": "Markdown articles rendered as a Wikipedia-style static site at wiki.enci.dev",
   "scripts": {
     "build": "node build.mjs",
+    "preview": "node build.mjs && node scripts/preview.mjs",
     "test": "node --test test/"
   },
   "keywords": [],
