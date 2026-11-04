@@ -3,6 +3,7 @@
   "installCommand": "npm ci",
   "outputDirectory": "dist",
   "framework": null,
+  "git": { "deploymentEnabled": { "teaching-voice": false } },
   "cleanUrls": true,
   "trailingSlash": false,
   "functions": {
