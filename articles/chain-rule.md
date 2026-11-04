@@ -15,9 +15,13 @@ The **chain rule** tells you how to take the derivative of a function that sits 
 
 In one line: **take the derivative of the outside function, leave the inside alone, then multiply by the derivative of the inside.**[^openstax]
 
-It is one of the basic differentiation rules in AP Calculus AB, alongside the power rule, product rule and quotient rule.[^apcentral]
+It is one of the basic differentiation rules in AP Calculus AB, alongside the power rule, product rule and quotient rule.[^apcentral] By the end of this article, you will be able to spot a function that needs it and take its derivative one layer at a time.
+
+In this article, we will (1) see why chained rates multiply, (2) turn that idea into a five-step procedure, (3) write the rule formally, and (4) work through examples from one layer to three. Then we'll look at the common mistakes and try some practice problems.
 
 ## Intuition
+
+In this section, we will see why the chain rule has to be a multiplication, using nothing but rates. Let's start with what a derivative measures.
 
 A derivative is a rate: how fast one thing changes when another changes.
 
@@ -28,7 +32,7 @@ Suppose three quantities are linked in a chain. $y$ depends on $u$, and $u$ depe
 
 Then $y$ changes $3 \times 2 = 6$ times as fast as $x$. **When rates are chained, they multiply.** That is the whole chain rule.
 
-Units show the same thing. Write each rate as a fraction with its units, and the middle unit cancels:
+Units show the same thing. Let's write each rate as a fraction with its units. The middle unit cancels:
 
 $$\frac{dy}{dx} = \frac{dy}{du}\cdot\frac{du}{dx}$$
 
@@ -38,11 +42,13 @@ $$\frac{\text{gallons}}{\text{hour}} = \frac{\text{gallons}}{\text{mile}}\cdot\f
 
 $$\frac{1}{30}\cdot 60 = 2$$
 
-so it uses 2 gallons per hour.
+As we can see, it uses 2 gallons per hour.
 
-Here gallons depend on miles, and miles depend on hours, so the rate of gallons per hour is the product of the two links.[^econgraphs]
+Here gallons depend on miles, and miles depend on hours. So the rate of gallons per hour is the product of the two links.[^econgraphs]
 
 Gears work the same way. If gear A turns gear B twice as fast, and gear B turns gear C three times as fast, then gear C spins six times as fast as gear A.
+
+Figure 1 draws this chain for a function inside a function. The ++inner++ function $g$ turns $x$ into $u$, and the ==outer== function $f$ turns $u$ into $y$.
 
 <figure class="diagram">
 <svg viewBox="0 0 640 170" role="img" aria-labelledby="dgm-title" xmlns="http://www.w3.org/2000/svg">
@@ -66,10 +72,25 @@ Gears work the same way. If gear A turns gear B twice as fast, and gear B turns 
 <text x="320" y="158" text-anchor="middle" font-weight="600">dy/dx = (dy/du) × (du/dx)</text>
 </g>
 </svg>
-<figcaption>A composite function as a chain. The rate through the whole chain is the product of the rates through each link.</figcaption>
+<figcaption>Figure 1. A composite function as a chain. The rate through the whole chain is the product of the rates through each link.</figcaption>
 </figure>
 
+Now let's try the same idea on a real function. Our running example for this article is $(3x+1)^5$, and we'll come back to it in every section.
+
+Call the inside $u = 3x + 1$. Then $y = u^5$.
+
+- $u$ changes **3 times** as fast as $x$, because the slope of $3x + 1$ is 3.
+- $y$ changes $5u^4$ times as fast as $u$, by the power rule.
+
+At $x = 0$, the inside is $u = 1$, so $y$ changes $5 \cdot 1^4 = 5$ times as fast as $u$. Chaining the two links gives $5 \times 3 = 15$. So at $x = 0$, $(3x+1)^5$ changes 15 times as fast as $x$.
+
+Note that the outer rate, $5u^4$, depends on where you are, unlike a gear ratio. That is why we keep track of the inside's value. We'll see this matter again in the formal statement.
+
+Now that we know chained rates multiply, next we'll turn the idea into steps you can follow on any problem.
+
 ## How to use it
+
+In this section, we turn figure 1 into a procedure. Each step matches one piece of the chain.
 
 To differentiate $f(g(x))$:
 
@@ -79,9 +100,15 @@ To differentiate $f(g(x))$:
 4. **Multiply by the derivative of the inner function.**
 5. **Simplify**, and check whether the inner function itself has an inside. If it does, repeat.
 
+For our running example $(3x+1)^5$, step 1 gives the fifth power, because raising to the fifth power is the last button you would press. Step 2 gives $3x + 1$. We'll finish steps 3 to 5 in Example 1.
+
 In the examples below, the <mark class="hl-outer">outer</mark> function is marked in one color and the <mark class="hl-inner">inner</mark> function in another.
 
+We now have the method. Next, let's write the same rule the way a textbook states it, so you can recognize it in both common notations.
+
 ## Formal statement
+
+So far, we have worked with rates and steps. In this section, we will write the rule precisely.
 
 If $g$ is differentiable at $x$ and $f$ is differentiable at $g(x)$, then $f(g(x))$ is differentiable at $x$, and[^openstax]
 
@@ -89,21 +116,27 @@ $$
 \frac{d}{dx}\,f\big(g(x)\big) = f'\big(g(x)\big)\cdot g'(x).
 $$
 
-This is **Lagrange** (prime) notation. Note that $f'$ is evaluated at $g(x)$, not at $x$.
+Here $f'\big(g(x)\big)$ is the derivative of the outer function, evaluated at the inner function, and $g'(x)$ is the derivative of the inner function. This is written in **Lagrange** notation, which marks derivatives with primes. Note that $f'$ is evaluated at $g(x)$, not at $x$.
 
-In **Leibniz** notation, with $y = f(u)$ and $u = g(x)$:
+In our running example, $f(u) = u^5$ and $g(x) = 3x + 1$. So $f'\big(g(x)\big) = 5(3x+1)^4$ and $g'(x) = 3$.
+
+The same rule in **Leibniz** notation, which writes derivatives as fractions like $\dfrac{dy}{dx}$, uses $y = f(u)$ and $u = g(x)$:
 
 $$
 \frac{dy}{dx} = \frac{dy}{du}\cdot\frac{du}{dx}.
 $$
 
-It looks as if the $du$ terms cancel. That is a good memory aid, but derivatives are not really fractions.[^wikipedia]
+This is the rate equation from the Intuition section. It looks as if the $du$ terms cancel. That is a good memory aid, but derivatives are not really fractions.[^wikipedia]
+
+With the rule written down, we're ready to use it. Next, we'll work through four examples, adding one new twist each time.
 
 ## Worked examples
 
-The examples go from easy to hard.
+In this section, we apply the five steps to four functions. The examples go from easy to hard: we start with our running example, then change the outer function, then the inner one, and finally add a third layer.
 
 ### Example 1: (3x + 1)⁵
+
+Let's finish the running example.
 
 - Outer: ==(something)⁵==. Inner: ++3x + 1++.
 - Derivative of the outer, inside left alone: $\color{orange}{5(\color{teal}{3x+1}\color{orange}{)^4}}$
@@ -114,7 +147,11 @@ $$
 \begin{aligned}\frac{d}{dx}(3x+1)^5 &= \color{orange}{5(}\color{teal}{3x+1}\color{orange}{)^4}\cdot\color{teal}{3} \\ &= 15(3x+1)^4\end{aligned}
 $$
 
+At $x = 0$, this gives $15 \cdot 1^4 = 15$, the same number we got from rates in the Intuition section. The inner derivative, 3, triples what the outer derivative alone would give.
+
 ### Example 2: sin(x²)
+
+Next, we swap the power for a trig function as the outer layer. The steps stay the same.
 
 - Outer: ==sin(something)==. Inner: ++x²++.
 - Derivative of the outer: $\color{orange}{\cos(}\color{teal}{x^2}\color{orange}{)}$
@@ -125,7 +162,11 @@ $$
 \begin{aligned}\frac{d}{dx}\sin(x^2) &= \color{orange}{\cos(}\color{teal}{x^2}\color{orange}{)}\cdot\color{teal}{2x} \\ &= 2x\cos(x^2)\end{aligned}
 $$
 
+As we can see, the inside $x^2$ stays inside the cosine, and the $2x$ comes along as a separate factor.
+
 ### Example 3: eᶜᵒˢ ˣ
+
+Now the inner function is the trig function, and the outer one is an exponential.
 
 - Outer: ==e^(something)==. Inner: ++cos x++.
 - Derivative of the outer: $\color{orange}{e^{\color{teal}{\cos x}}}$ (the exponential is its own derivative)
@@ -136,9 +177,11 @@ $$
 \begin{aligned}\frac{d}{dx}e^{\cos x} &= \color{orange}{e^{\color{teal}{\cos x}}}\cdot\color{teal}{(-\sin x)} \\ &= -\sin x\, e^{\cos x}\end{aligned}
 $$
 
+Note that the minus sign comes from the inner derivative. It is easy to lose, so carry it into the final answer right away.
+
 ### Example 4: √(sin 4x), a chain of three
 
-Here there are three layers: a square root, of a sine, of $4x$. Peel them from the outside in, one factor per layer.
+So far, every example had two layers. Let's upgrade to three: a square root, of a sine, of $4x$. We peel them from the outside in, one factor per layer, which is step 5 of the procedure.
 
 - Layer 1, ==√(something)==: derivative $\dfrac{1}{2\sqrt{\sin 4x}}$
 - Layer 2, ++sin(something)++: derivative $\cos 4x$
@@ -149,7 +192,13 @@ $$
 \begin{aligned}\frac{d}{dx}\sqrt{\sin 4x} &= \frac{1}{2\sqrt{\sin 4x}}\cdot\cos 4x\cdot 4 \\ &= \frac{2\cos 4x}{\sqrt{\sin 4x}}\end{aligned}
 $$
 
+Three layers gave three factors. This is the chain from figure 1 with one more link added.
+
+Now that we've seen the rule work four times, let's look at the ways it most often goes wrong.
+
 ## Common mistakes
+
+In this section, each mistake is shown as a wrong answer next to the right one. Most of them come from skipping or changing one piece of the chain.
 
 :::: compare Forgetting the inner derivative
 ::: wrong
@@ -196,7 +245,11 @@ Every layer gives a factor, including the $4$ from $4x$: $\dfrac{4\cos 4x}{2\sqr
 :::
 ::::
 
+Each of these breaks one of the five steps, so going through the steps in order is the best defense. Next, it's your turn to try them.
+
 ## Practice problems
+
+In this section, you'll use the procedure on five problems, from easy to hard. Each solution is hidden until you open it, so try the problem first.
 
 **1.** Find $\dfrac{d}{dx}(x^2+1)^3$.
 
@@ -238,14 +291,16 @@ $h'(2) = f'(g(2))\cdot g'(2) = f'(3)\cdot 4 = -1\cdot 4 = -4$.
 The value $f'(2) = 5$ is a distractor: $f'$ must be evaluated at $g(2) = 3$, not at $2$.
 :::
 
-## Key takeaways
+Problem 5 is the formal statement's warning in action: $f'$ is evaluated at the inside's value. Next, let's collect what we've learned.
+
+## Summary
 
 ::: takeaways
-- Use the chain rule whenever one function is inside another.
-- Outside first, inside left alone, then multiply by the derivative of the inside.
-- In $f'(g(x))$, the outer derivative is evaluated at the inner function.
-- Each layer of nesting adds one more factor.
-- Leibniz form: $\dfrac{dy}{dx} = \dfrac{dy}{du}\cdot\dfrac{du}{dx}$, so rates multiply.
+- Use the **chain rule** whenever one function sits inside another, as in $(3x+1)^5$ or $\sin(x^2)$.
+- To apply it, differentiate the **outer function** with the inside left alone, then multiply by the derivative of the **inner function**.
+- In $f'(g(x))$, the outer derivative is evaluated at the inner function $g(x)$, not at $x$.
+- Each layer of nesting adds one more factor, so a three-layer function like $\sqrt{\sin 4x}$ has three factors.
+- In Leibniz form, $\dfrac{dy}{dx} = \dfrac{dy}{du}\cdot\dfrac{du}{dx}$, which says that when rates are chained, they multiply.
 :::
 
 ## AP exam tips
@@ -261,13 +316,17 @@ The AP Calculus AB course and exam description on AP Central lists the topics co
 
 ## Beyond AP Calculus AB
 
+Everything so far has had one input variable and one derivative. In this section, we look briefly at where the chain rule goes next.
+
 ### Several variables
 
-If $z = f(x, y)$, where $x$ and $y$ both depend on $t$, then $z$ changes with $t$ through both paths, and the two contributions add:[^pauls3]
+Let's extend the chain from one path to two. If $z = f(x, y)$, where $x$ and $y$ both depend on $t$, then $z$ changes with $t$ through both paths, and the two contributions add:[^pauls3]
 
 $$
 \frac{dz}{dt} = \frac{\partial f}{\partial x}\frac{dx}{dt} + \frac{\partial f}{\partial y}\frac{dy}{dt}
 $$
+
+Each term is a two-link chain like the ones in figure 1. Here $\dfrac{\partial f}{\partial x}$, a *partial derivative*, is the rate of $f$ in $x$ alone, with $y$ held fixed.
 
 ### Higher derivatives
 
@@ -275,7 +334,9 @@ Taking the derivative of a composite function twice needs the chain rule and the
 
 ## History
 
-The chain rule seems to have first been used by Gottfried Wilhelm Leibniz. In a 1676 memoir he used it to find the derivative of $\sqrt{a + bz + cz^2}$, treating it as a square root of another function.[^wikipedia]
+Finally, let's look at where the rule came from.
+
+The chain rule seems to have first been used by Gottfried Wilhelm Leibniz. In a 1676 memoir he used it to find the derivative of $\sqrt{a + bz + cz^2}$, treating it as a square root of another function.[^wikipedia] That is the same outer-and-inner view we used throughout this article.
 
 Guillaume de l'Hôpital used the rule implicitly in *Analyse des infiniment petits pour l'intelligence des lignes courbes* (1696), the first textbook of Leibniz's differential calculus.[^wikipedia][^analyse]
 
