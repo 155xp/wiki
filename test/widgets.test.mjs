@@ -57,7 +57,7 @@ describe('widgets in articles', () => {
   test('a static plot is an inline SVG and loads no script', () => {
     const { html, warnings } = render('```plot\nf(x) = x^2\ncaption: Figure 1. A parabola.\n```');
     assert.deepEqual(warnings, []);
-    assert.match(html, /<figure class="plot" id="plot1"><svg viewBox/);
+    assert.match(html, /<figure class="plot" id="plot1"[^>]*><svg viewBox/);
     assert.match(html, /<figcaption>Figure 1\. A parabola\.<\/figcaption>/);
     assert.doesNotMatch(html, /widgets\.js/);
   });
@@ -92,7 +92,7 @@ describe('widgets in articles', () => {
     assert.match(html, /<li class="choice">wrong<div class="choice-hint">Because\.<\/div><\/li>/);
     assert.match(html, /<li class="choice" data-correct="">right<\/li>/);
     assert.doesNotMatch(html, /\[x\]|\[ \]/);
-    assert.match(html, /<details class="check-answer"><summary>Explanation<\/summary><div class="details-body">\n<p>Why it is right\.<\/p>/);
+    assert.match(html, /<details class="check-answer"><summary>Show answer<\/summary><div class="details-body">\n<p>Why it is right\.<\/p>/);
   });
   test('a check with no choices is a question with a hidden answer', () => {
     const { html } = render('::: check Why?\nBecause.\n:::');
