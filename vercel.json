@@ -3,7 +3,7 @@
   "installCommand": "npm ci",
   "outputDirectory": "dist",
   "framework": null,
-  "git": { "deploymentEnabled": { "teaching-voice": false } },
+  "git": { "deploymentEnabled": { "teaching-voice": false, "widgets": false } },
   "cleanUrls": true,
   "trailingSlash": false,
   "functions": {
@@ -11,7 +11,7 @@
   },
   "rewrites": [
     { "source": "/", "destination": "/api/index?__p=/" },
-    { "source": "/:path((?!katex/|owner/|api/).*)", "destination": "/api/index?__p=/:path" },
+    { "source": "/:path((?!katex/|owner/|widgets/|api/).*)", "destination": "/api/index?__p=/:path" },
     { "source": "/api/owner/:rest*", "destination": "/api/index?__p=/api/owner/:rest*" },
     { "source": "/api/visibility", "destination": "/api/index?__p=/api/visibility" }
   ]

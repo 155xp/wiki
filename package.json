@@ -21,7 +21,8 @@
     "markdown-it-container": "^4.0.0",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-ins": "^4.0.0",
-    "markdown-it-mark": "^4.0.0"
+    "markdown-it-mark": "^4.0.0",
+    "mermaid": "^11.17.2"
   },
   "private": true,
   "engines": {
