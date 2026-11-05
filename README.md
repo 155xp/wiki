@@ -99,3 +99,60 @@ These all stay readable as plain Markdown in Obsidian.
 
 - `::: details Solution` … `:::` is a collapsed answer.
 - Raw HTML is allowed, so an inline `<figure class="diagram"><svg>…</svg></figure>` works. Use `currentColor`, `var(--inner)` and `var(--outer)` so diagrams follow light and dark.
+
+## Diagrams and widgets (study pages)
+
+All four are written in Markdown and rendered on the server, so a page reads fine before (or without) JavaScript. `/widgets/widgets.js` loads only on pages with an interactive plot, step reveal or self-check; mermaid loads only on pages with a diagram.
+
+**Function plot.** A ` ```plot ` fence, one item per line. Math-accurate: curves are sampled, tangents use the real derivative, and a bad line fails `npm run build` with its line number.
+
+````
+```plot
+x: -1 to 6
+y: -1 to 6
+f(x) = sqrt(25 - x^2) "y = √(25 − x²)"
+tangent f at 3
+secant f from 1 to 4
+shade f from 0 to 2
+point (3, 4) "(3, 4)"
+caption: Figure 1. Text with $math$.
+```
+````
+
+- Window: `x: a to b`, `y: a to b` (y defaults to fit), `aspect: equal` so circles stay round, `grid: off`.
+- Curves: `f(x) = ...` (named, so other lines can use `f`, `f'` and `f''`), `y = ...`, `x = 3` (vertical line), `implicit x^2 + x*y + y^2 = 7`, `parametric (5cos(t), 5sin(t)) for t from 0 to 2pi`, `inverse f` (the mirror image across $y = x$).
+- On a curve: `tangent f at 3`, `secant f from 1 to 4`, `shade f from 0 to 2`, `shade f and g from 0 to 2`.
+- Marks: `point (3, 4) "label"`, `segment (1, 1) to (3, 1)`, `line through (3, 4) slope -3/4`, `label (1, 2) "text"`.
+- Style tags at the end of a line: `[outer]` (red), `[inner]` (blue), `[muted]`, `[good]`, `[dashed]`, `[thin]`, `[bold]`, `[hidden]`. Tangents default to outer, secants and shading to inner.
+- Expressions: `+ - * / ^`, implicit multiplication (`2x`, `3sin(x)`, `xy`), `sin^2(x)`, `pi`, `e`, and `sin cos tan sec csc cot asin acos atan sqrt cbrt ln log exp abs`.
+
+**Interactive plot.** Add any of these to a plot and it becomes a live card:
+
+- `drag a on f from 0 to 4.8 = 3`: a point the reader drags along `f`; `a` is its x and can be used in any other line (`tangent f at a`). Also `drag t on (5cos(t), 5sin(t)) from 0 to 2pi = 1` along a parametric curve, or `drag a from -2 to 2 = 0` along the x-axis. Optional `step 0.5`.
+- `slider k from 0.5 to 3 = 1 step 0.1 "label with $k$"`: a range slider; `k` works in any expression.
+- `readout "slope $f'(a)$" f'(a)`: a live number under the plot. `[digits=3]` changes the rounding.
+
+**Flow or concept diagram.** A ` ```mermaid ` fence (Obsidian renders these too). A `%% caption: Figure 2. ...` line becomes the caption.
+
+**Step-by-step reveal.** The numbered list inside is shown one step at a time; text before the list is the problem, text after it appears with the last step.
+
+```
+::: steps Example 1. Find $y'$ for $y = \sin^3(2x)$.
+1. **Name the layers.** ...
+2. **Cube layer.** ...
+
+So the answer is $6\sin^2(2x)\cos(2x)$.
+:::
+```
+
+**Self-check.** Task-list choices; `[x]` marks the right one (never shown on the page). An indented line under a choice is the hint shown when it is picked. The rest is the explanation. With no choices, the body is a hidden answer.
+
+```
+::: check What is $\frac{d}{dx}\sin(5x)$?
+- [ ] $\cos(5x)$
+  The inside $5x$ still owes a factor of 5.
+- [x] $5\cos(5x)$
+
+The inside $5x$ adds its derivative, 5.
+:::
+```
