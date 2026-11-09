@@ -705,30 +705,32 @@ $E$ goes as $\dfrac{1}{\lambda}$, so 400 nm wins.
 
 ## Video sources and transcript status
 
-**Sources and scope:** the reported teacher outline prioritizes periodicity and conceptual FRQs, with PES and mass spectrometry from the last assigned video and the Lab Assignments worksheet/key. The worksheet/key contents and exact last-assigned video were not independently verified here; the linked PES/mass-spec lessons are study resources, not a claim to reproduce that worksheet. The public playlist links below include 12 Ch 7 resources and 4 related resources. Copper uses Mrs. Cash's displayed example; the other calculation exercises are practice examples. The Schoology unit list was not rechecked. Formal charge, the magnetic-properties lab and detailed electron-affinity exceptions are not named priorities in the reported outline.
+**Exact Ch 7 playlist:** [Mrs. Cash — AP Chemistry: Chapter 7: Electronic Structure](https://www.youtube.com/playlist?list=PLi7M5YdfoYqVupJxcya_-HKx0blKs3E0-). Its 16 videos are listed below in playlist order. Transcripts are available for **15 of 16 unit videos**; the 70-minute review is the remaining gap. Total runtime is **3 hr 32 min 17 sec**, or **2 hr 21 min 49 sec without the review**.
 
-**Transcripts:** automatic captions, except mass spectrometry, which uses local audio transcription because captions were unavailable. Transcripts may misrecognize chemistry terms and numbers.
+**Sources and scope:** the reported teacher outline prioritizes periodicity and conceptual FRQs and emphasizes PES/mass spectrometry video work and the Lab Assignments worksheet/key. Playlist order does not establish which video was last assigned. That assignment mapping and the worksheet/key contents remain unverified; no worksheet questions are claimed here. Copper uses Mrs. Cash's displayed example; the other calculation exercises are practice examples. Formal charge is an additional reference outside this exact playlist, not a confirmed test priority.
 
-| Mrs. Cash video | Runtime | Scope | Transcript |
-|---|---:|---|---|
-| [How to Write Electron Configuration](https://www.youtube.com/watch?v=KmUtra64Eus) | 6:25 | Ch 7 resource | Available |
-| [How to find the number of electrons in each electron shell or energy level](https://www.youtube.com/watch?v=y4y-Dd133jc) | 11:09 | Related: shell electron counts | Available |
-| [How to write orbital notation](https://www.youtube.com/watch?v=sm-mjywGJGQ) | 4:55 | Ch 7 resource | Available |
-| [How to Write the Electron Configuration for An Ion](https://www.youtube.com/watch?v=pCPHlAZBCZw) | 7:06 | Ch 7 resource | Available |
-| [How to draw an electron dot diagram for an atom](https://www.youtube.com/watch?v=_uOPrUkhwlA) | 4:30 | Related: electron-dot diagrams | Available |
-| [Coulombic Force, Effective nuclear charge (Zeff), and Shielding: How it all Affects Periodicity](https://www.youtube.com/watch?v=WqR_f7UrBVU) | 25:24 | Ch 7 resource | Available |
-| [How to Solve PES Problems: Photoelectron Spectroscopy \| AP Chemistry \| PES Explained](https://www.youtube.com/watch?v=MR1p0PBtPpc) | 9:05 | Ch 7 resource | Available |
-| [How to Solve Mass Spectrometry Problems](https://www.youtube.com/watch?v=QLiBIFy6QSY) | 7:02 | Ch 7 resource | Available |
-| [How to Calculate Formal Charge \| Formal Charge Calculation in Lewis Structures \| AP chemistry](https://www.youtube.com/watch?v=G0GX8_lCavQ) | 7:32 | Conditional: Chapter 8 formal charge | Available |
-| [Lesson on Wave Calculations: Wavelength, Frequency, and Energy and AP Chemistry Calculations](https://www.youtube.com/watch?v=xZrEjwRdHKA) | 18:04 | Ch 7 resource | Available |
-| [Wavelength, Frequency, and Energy Wave Calculations (AP / Honors Chemistry)](https://www.youtube.com/watch?v=SeGQyJR-0SE) | 6:44 | Ch 7 resource | Available |
-| [Magnetic Properties of Matter Lab Instructions \| AP Chemistry \| How to Test Paramagnetism Lab](https://www.youtube.com/watch?v=HnQbO1umE1I) | 3:36 | Supplement: magnetic-properties lab | Available |
-| [Breakdown about Electron Configuration: What the number "Shell" and Letter "Subshell" Mean \| AP Chem](https://www.youtube.com/watch?v=15APaohQ038) | 14:03 | Ch 7 resource | Available |
-| [Why Is the Ionization Energy of Oxygen Less Than Nitrogen? \| Group 15 vs Group 16 Anomaly \| AP Chem](https://www.youtube.com/watch?v=HWegv9kQtAE) | 2:29 | Ch 7 resource | Available |
-| [Why Is the Ionization Energy of Al Lower Than Mg? \| Group 2 vs Group 13 Anomaly \| AP Chem](https://www.youtube.com/watch?v=nGFBlgIG6oY) | 3:20 | Ch 7 resource | Available |
-| [Coulomb's Law: The Reason behind the Periodic Trends](https://www.youtube.com/watch?v=cPUUzI9oHfI) | 17:57 | Ch 7 resource | Available |
+**Transcripts:** 14 unit videos have English caption transcripts; mass spectrometry uses local audio transcription. The review transcript is not yet available. Automatic transcripts may misrecognize chemistry terms and numbers.
 
-Two playlist entries are private: [jB5HlaAy6OM](https://www.youtube.com/watch?v=jB5HlaAy6OM) and [wmerMZqanaI](https://www.youtube.com/watch?v=wmerMZqanaI). Their titles and unit relevance could not be identified; no transcript is claimed for either.
+| Order | Mrs. Cash video | Runtime | Transcript |
+|---:|---|---:|---|
+| 1 | [Lesson on Wave Calculations: Wavelength, Frequency, and Energy and AP Chemistry Calculations](https://www.youtube.com/watch?v=xZrEjwRdHKA) | 18:04 | Available |
+| 2 | [Wavelength, Frequency, and Energy Wave Calculations (AP / Honors Chemistry)](https://www.youtube.com/watch?v=SeGQyJR-0SE) | 6:44 | Available |
+| 3 | [How to Write Electron Configuration](https://www.youtube.com/watch?v=KmUtra64Eus) | 6:25 | Available |
+| 4 | [How to find the number of electrons in each electron shell or energy level](https://www.youtube.com/watch?v=y4y-Dd133jc) | 11:09 | Available |
+| 5 | [How to write orbital notation](https://www.youtube.com/watch?v=sm-mjywGJGQ) | 4:55 | Available |
+| 6 | [How to Write the Electron Configuration for An Ion](https://www.youtube.com/watch?v=pCPHlAZBCZw) | 7:06 | Available |
+| 7 | [How to draw an electron dot diagram for an atom](https://www.youtube.com/watch?v=_uOPrUkhwlA) | 4:30 | Available |
+| 8 | [Breakdown about Electron Configuration: What the number "Shell" and Letter "Subshell" Mean \| AP Chem](https://www.youtube.com/watch?v=15APaohQ038) | 14:03 | Available |
+| 9 | [Coulomb's Law: The Reason behind the Periodic Trends](https://www.youtube.com/watch?v=cPUUzI9oHfI) | 17:57 | Available |
+| 10 | [Coulombic Force, Effective nuclear charge (Zeff), and Shielding: How it all Affects Periodicity](https://www.youtube.com/watch?v=WqR_f7UrBVU) | 25:24 | Available |
+| 11 | [How to Solve PES Problems: Photoelectron Spectroscopy \| AP Chemistry \| PES Explained](https://www.youtube.com/watch?v=MR1p0PBtPpc) | 9:05 | Available |
+| 12 | [How to Solve Mass Spectrometry Problems](https://www.youtube.com/watch?v=QLiBIFy6QSY) | 7:02 | Available |
+| 13 | [AP Chemistry: Electron Structure, Periodicity, PES, and Mass Spec - 70 min review summary (Ch 7)](https://www.youtube.com/watch?v=uDaOGqvUJ2M) | 70:28 | Missing: review transcript |
+| 14 | [Magnetic Properties of Matter Lab Instructions \| AP Chemistry \| How to Test Paramagnetism Lab](https://www.youtube.com/watch?v=HnQbO1umE1I) | 3:36 | Available |
+| 15 | [Why Is the Ionization Energy of Oxygen Less Than Nitrogen? \| Group 15 vs Group 16 Anomaly \| AP Chem](https://www.youtube.com/watch?v=HWegv9kQtAE) | 2:29 | Available |
+| 16 | [Why Is the Ionization Energy of Al Lower Than Mg? \| Group 2 vs Group 13 Anomaly \| AP Chem](https://www.youtube.com/watch?v=nGFBlgIG6oY) | 3:20 | Available |
+
+The final playlist item is the Al/Mg ionization-energy explanation; that does **not** identify it as the final assigned video.
 
 ::::: details Optional reference: formal charge
 This topic is not named in the reported test outline; it is not a priority here. That does not establish that it is definitely excluded.
