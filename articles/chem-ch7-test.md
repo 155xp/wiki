@@ -21,9 +21,9 @@ Nearly every question is one idea: **an electron is held tighter when it feels m
 
 **Relative abundance means how common an isotope is, not how heavy it is.** Isotopes are atoms of the same element with the same number of protons but different numbers of neutrons. The periodic table gives a weighted average: common isotopes count more than rare ones.
 
-Mrs. Cash: [How to Solve Mass Spectrometry Problems](https://www.youtube.com/watch?v=QLiBIFy6QSY), especially [the copper spectrum and weighted average, 1:24–2:10](https://www.youtube.com/watch?v=QLiBIFy6QSY&t=84s). The copper numbers below come directly from her displayed example. Other examples are labeled guide practice.
+Mrs. Cash: [mass spectrometry](https://www.youtube.com/watch?v=QLiBIFy6QSY) · [copper spectrum and weighted average, 1:24–2:10](https://www.youtube.com/watch?v=QLiBIFy6QSY&t=84s).
 
-### First turn a percentage into a fraction
+### Convert percentages to fractions
 
 “69% of the atoms” means 69 out of every 100 atoms. The decimal fraction is 0.69, **not 69**. The fractions for all isotopes must total 1; their percentages must total 100%.
 
@@ -59,7 +59,7 @@ Check: the answer lies between 63 and 65 and is closer to 63, the more common is
 
 If there are **exactly two isotopes**, let the first fraction be $x$. The other is $1-x$, because all atoms must be accounted for. There is only one unknown.
 
-**Guide practice, retained from the earlier wiki:** boron-10 has mass 10.013 amu; boron-11 has mass 11.009 amu; average atomic mass is 10.81 amu. Find each percent abundance. These are guide-practice values, not a claim about a spoken video example.
+**Practice:** boron-10 has mass 10.013 amu; boron-11 has mass 11.009 amu; average atomic mass is 10.81 amu. Find each percent abundance.
 
 ::: details Reveal the full unknown-abundance setup
 **Name the unknowns:** $x=f_{10\mathrm B}$, the fraction of boron atoms that are boron-10; $1-x=f_{11\mathrm B}$, the fraction that are boron-11.
@@ -94,7 +94,7 @@ Do not set the two fractions to $x$ and $x$: that assumes equal abundance. Do no
 - **Different peaks for one element:** different neutrons, not different protons. Mass number is protons plus neutrons; it is not the exact measured isotope mass.
 - **Read the y-axis label.** Percent abundance adds to 100%; relative intensity may instead set the tallest peak to 100. Never assume every axis is already a percentage.
 
-**Guide practice:** two singly charged isotope peaks occur at masses 63 amu and 65 amu. Their relative heights are 100 and 45, not percentages. Find the average mass.
+**Practice:** two singly charged isotope peaks occur at masses 63 amu and 65 amu. Their relative heights are 100 and 45, not percentages. Find the average mass.
 
 ::: details Reveal how to normalize peak heights
 **Add all heights first:** total relative signal is $100+45=145$ signal units.
@@ -135,7 +135,7 @@ For [Br$_2$, about 3:07–5:02](https://www.youtube.com/watch?v=QLiBIFy6QSY&t=18
 
 ## Light and the hydrogen spectrum
 
-Mrs. Cash: [wave lesson](https://www.youtube.com/watch?v=xZrEjwRdHKA) · [short calculation practice](https://www.youtube.com/watch?v=SeGQyJR-0SE). Bohr and photoelectric notes below are retained wiki material; no separately titled video for them was found in the public AP playlist.
+Mrs. Cash: [wave lesson](https://www.youtube.com/watch?v=xZrEjwRdHKA) · [short calculation practice](https://www.youtube.com/watch?v=SeGQyJR-0SE).
 
 ### What is going on
 
@@ -159,7 +159,7 @@ Use $c=2.998\times10^8\ \mathrm{m\,s^{-1}}$ and $h=6.626\times10^{-34}\ \mathrm{
 
 $$\lambda=(500\ \mathrm{nm})\left(\frac{1\ \mathrm m}{10^9\ \mathrm{nm}}\right)=5.00\times10^{-7}\ \mathrm m$$
 
-**Guide practice:** find the frequency and energy of a 500 nm photon.
+**Practice:** find the frequency and energy of a 500 nm photon.
 
 ::: details Reveal the wave calculation
 $$\nu=\frac{2.998\times10^8\ \mathrm{m\,s^{-1}}}{5.00\times10^{-7}\ \mathrm m}=6.00\times10^{14}\ \mathrm{s^{-1}}$$
@@ -204,7 +204,7 @@ $E$ goes as $\dfrac{1}{\lambda}$, so 400 nm wins.
 
 ## Quantum numbers and orbitals
 
-Mrs. Cash: [shells and subshells](https://www.youtube.com/watch?v=15APaohQ038) · [electrons per shell](https://www.youtube.com/watch?v=y4y-Dd133jc). The full quantum-number rules are retained wiki notes, not a claim that every rule appears in these videos.
+Mrs. Cash: [shells and subshells](https://www.youtube.com/watch?v=15APaohQ038) · [electrons per shell](https://www.youtube.com/watch?v=y4y-Dd133jc).
 
 ### What is going on
 
@@ -258,7 +258,7 @@ Electrons fill the lowest-energy spots first: 1s 2s 2p 3s 3p 4s 3d 4p, one per o
 | d | 5 | 10 | Put one electron in each box before pairing |
 | f | 7 | 14 | Put one electron in each box before pairing |
 
-**Pauli:** two electrons in the same orbital must have opposite spins. **Hund:** in equal-energy orbitals, fill singly with parallel spins before pairing. Unpaired electrons make a species paramagnetic; if all are paired it is diamagnetic. [Mrs. Cash's magnetic-properties lab](https://www.youtube.com/watch?v=HnQbO1umE1I) is supporting context, not a newly confirmed test requirement.
+**Pauli:** two electrons in the same orbital must have opposite spins. **Hund:** in equal-energy orbitals, fill singly with parallel spins before pairing. Unpaired electrons make a species paramagnetic; if all are paired it is diamagnetic. Mrs. Cash: [magnetic-properties lab](https://www.youtube.com/watch?v=HnQbO1umE1I).
 
 **For a transition-metal ion:** write the neutral configuration first; remove the electrons with the greatest shell number $n$ first. Filling 4s before 3d does **not** mean removing 3d before 4s.
 
@@ -306,7 +306,7 @@ $$F \propto \frac{q_1 q_2}{r^2} \qquad Z_{\text{eff}} \approx \text{protons} - \
 Here $F$ is the attraction magnitude, $q_1$ and $q_2$ are charge magnitudes, and $r$ is separation. To explain a trend, compare $Z_{\text{eff}}$ and distance, then state the attraction.
 :::
 
-### Write the explanation the teacher is looking for
+### Explain a trend
 
 **Across a period:** more protons, added electrons in the same main shell, roughly similar core shielding → greater effective nuclear charge → stronger nucleus–electron attraction → smaller radius and generally higher IE/EN.
 
@@ -392,7 +392,7 @@ Ionization energy (IE) is the energy to remove a gaseous atom's outermost electr
 
 **Successive IEs** grow, since fewer electrons share the protons, then jump at the first core electron, which is closer and barely shielded.
 
-**Keep the explanations separate:** Al versus Mg is an s-versus-p / penetration argument, not a pairing argument. O versus N is a paired-electron repulsion argument, not a new-shell argument. In her Al/Mg video, Mrs. Cash also warns not to transfer these first-IE exceptions to inner-shell PES peaks.
+**Keep the explanations separate:** Al versus Mg is an s-versus-p / penetration argument, not a pairing argument. O versus N is a paired-electron repulsion argument, not a new-shell argument. These first-IE exceptions do not apply to inner-shell PES peaks.
 
 Two dips: **group 2 to 13** (Be to B, Mg to Al), where the first p electron is higher in energy and penetrates toward the nucleus less effectively than an s electron; and **group 15 to 16** (N to O, P to S), where the first paired p electron is repelled by its partner.
 
@@ -428,7 +428,7 @@ Count the IEs **before** the jump: 2.
 
 ## Electron affinity and electronegativity
 
-Mrs. Cash: [Coulombic force and periodicity](https://www.youtube.com/watch?v=WqR_f7UrBVU). The detailed electron-affinity exceptions below are retained wiki enrichment; prioritize IE, radius and EN if time is short.
+Mrs. Cash: [Coulombic force and periodicity](https://www.youtube.com/watch?v=WqR_f7UrBVU).
 
 ### What is going on
 
@@ -468,7 +468,7 @@ Cl does; crowding in F offsets its pull.
 
 ## Formal charge
 
-**Conditional review:** this was already flagged as possible Chapter 8 crossover, not newly confirmed Ch 7 test scope. Mrs. Cash: [formal-charge calculation](https://www.youtube.com/watch?v=G0GX8_lCavQ).
+Mrs. Cash: [formal-charge calculation](https://www.youtube.com/watch?v=G0GX8_lCavQ).
 
 ### What is going on
 
@@ -657,9 +657,9 @@ $$f_{\text{first isotope}}=\frac{20\ \text{first-peak signal units}}{80\ \text{t
 
 ## Video sources and transcript status
 
-The existing wiki notes were kept and expanded. The public AP playlist was rescanned; **the Schoology unit list was not rechecked**. These are the 12 previously identified Ch 7 resources plus 4 explicitly related resources, not a certified complete Schoology assignment list. No separately titled public lesson on Bohr, photoelectric effect, quantum numbers or unknown isotope abundance was found; those guide explanations are retained notes or labeled guide practice.
+**Sources and scope:** the links below include 12 Ch 7 resources and 4 related resources. The Schoology unit list was not rechecked, so this is not a confirmed complete assignment list. Formal charge is possible Chapter 8 crossover; the magnetic-properties lab and detailed electron-affinity exceptions are supplemental. Copper uses Mrs. Cash's displayed example; the other calculation exercises are practice examples. No separate public lesson was found for Bohr, photoelectric effect, quantum numbers or unknown isotope abundance.
 
-Caption text is an automatic record, not a checked answer key. The source pack contains timestamped text and original VTT files where available. The mass-spec caption endpoint returned HTTP 429, so its real local audio was transcribed with faster-whisper instead. Chemistry terms and numerical speech can be imperfect in either method.
+**Transcripts:** automatic captions, except mass spectrometry, which uses local audio transcription because captions were unavailable. Transcripts may misrecognize chemistry terms and numbers.
 
 | Mrs. Cash video | Runtime | Scope | Transcript |
 |---|---:|---|---|
