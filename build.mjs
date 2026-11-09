@@ -31,6 +31,9 @@ if (fs.existsSync(OWNER)) {
 fs.mkdirSync(new URL('widgets/mermaid/chunks/mermaid.esm.min/', OUT), { recursive: true });
 fs.copyFileSync(new URL('lib/plot.mjs', ROOT), new URL('widgets/plot.mjs', OUT));
 for (const f of fs.readdirSync(new URL('public/widgets/', ROOT))) fs.copyFileSync(new URL(`public/widgets/${f}`, ROOT), new URL(`widgets/${f}`, OUT));
+fs.mkdirSync(new URL('notes/', OUT), { recursive: true });
+fs.copyFileSync(new URL('lib/notes.mjs', ROOT), new URL('notes/notes-core.mjs', OUT));
+fs.copyFileSync(new URL('public/notes/notes.js', ROOT), new URL('notes/notes.js', OUT));
 const MERMAID = new URL('node_modules/mermaid/dist/', ROOT);
 fs.copyFileSync(new URL('mermaid.esm.min.mjs', MERMAID), new URL('widgets/mermaid/mermaid.esm.min.mjs', OUT));
 for (const f of fs.readdirSync(new URL('chunks/mermaid.esm.min/', MERMAID)).filter((f) => f.endsWith('.mjs'))) {
