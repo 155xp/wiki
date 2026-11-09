@@ -19,13 +19,33 @@ Nearly every question is one idea: **an electron is held tighter when it feels m
 
 ## Relative abundance and mass spectra
 
-**Relative abundance means how common an isotope is, not how heavy it is.** Isotopes are atoms of the same element with the same number of protons but different numbers of neutrons. The periodic table gives a weighted average: common isotopes count more than rare ones.
+**An isotope is one kind of atom of an element.** Every copper atom has 29 protons; that makes it copper. Copper-63 and copper-65 have different numbers of neutrons, so they have different masses. They are still the same element. **Abundance means how common each kind is.** It does not mean how heavy that kind is.
 
 Mrs. Cash: [mass spectrometry](https://www.youtube.com/watch?v=QLiBIFy6QSY) · [copper spectrum and weighted average, 1:24–2:10](https://www.youtube.com/watch?v=QLiBIFy6QSY&t=84s).
 
-### Convert percentages to fractions
+### Start with 100 atoms you can count
 
-“69% of the atoms” means 69 out of every 100 atoms. The decimal fraction is 0.69, **not 69**. The fractions for all isotopes must total 1; their percentages must total 100%.
+Imagine a sample with **exactly 100 copper atoms**: 69 are copper-63 and 31 are copper-65. For this teaching illustration, use about 63 amu for each copper-63 atom and about 65 amu for each copper-65 atom. An **amu** is a tiny unit of mass used for atoms.
+
+The 69 lighter atoms contribute $69(63)=4347$ amu. The 31 heavier atoms contribute $31(65)=2015$ amu. Together, all 100 atoms have $4347+2015=6362$ amu of mass.
+
+**What is the average mass of one atom?** Share the total mass equally among the 100 atoms:
+
+$$\overline m=\frac{(69\ \text{copper-63 atoms})(63\ \mathrm{amu\ per\ copper\text{-}63\ atom})+(31\ \text{copper-65 atoms})(65\ \mathrm{amu\ per\ copper\text{-}65\ atom})}{100\ \text{total copper atoms}}=\frac{6362\ \mathrm{amu}}{100\ \text{copper atoms}}=63.62\ \mathrm{amu\ per\ atom}$$
+
+**Dividing by the atom count is what makes this an average:** the top is the mass of the whole sample; the bottom is how many atoms share that mass. The answer describes mass **per atom**, not the mass of all 100 atoms. No individual copper atom has to weigh exactly 63.62 amu. It is an average of the two kinds.
+
+This is why you cannot just average 63 and 65 to get 64: that would treat the two kinds as equally common. Here there are many more lighter atoms, so the average must be closer to 63.
+
+**Rounded versus precise masses:** 63 and 65 are mass numbers used as approximate masses in Mrs. Cash's example. More precise isotope masses are about 62.9296 amu and 64.9278 amu, and actual natural percentages are about 69.15% and 30.85%. Those give about 63.546 amu, the periodic-table value. Use the masses and abundances supplied in the problem; do not mix a rounded example with precise data and expect exactly the same answer. [NIST copper data](https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=Cu).
+
+### Decimals do the same counting in less space
+
+“69% of the atoms” means 69 out of every 100 atoms. So $69\div100=0.69$ and $31\div100=0.31$. Instead of multiplying by 69 and 31 and dividing the whole sum by 100 at the end, divide each count by 100 first. **Nothing about the average changes.**
+
+$$\overline m=\left(\frac{69\ \text{copper-63 atoms}}{100\ \text{copper atoms}}\right)(63\ \mathrm{amu\ per\ copper\text{-}63\ atom})+\left(\frac{31\ \text{copper-65 atoms}}{100\ \text{copper atoms}}\right)(65\ \mathrm{amu\ per\ copper\text{-}65\ atom})=63.62\ \mathrm{amu\ per\ atom}$$
+
+The decimals 0.69 and 0.31 simply describe the shares of the sample. They are **not a new formula**. The shares add to 1 whole sample; the percentages add to 100%.
 
 $$f_{63\mathrm{Cu}}=\frac{69\ \text{atoms of copper-63}}{100\ \text{total copper atoms}}=0.69\ \text{fraction of copper atoms}$$
 
@@ -35,7 +55,7 @@ A percentage is a count fraction here, **not a mass fraction**. Do not divide by
 
 ### Find the average atomic mass
 
-**The steps:** read each isotope's mass; change its percent abundance to a decimal; multiply mass by fraction; add all the contributions. Keep extra digits until the last line.
+**Now the general rule has a meaning:** each kind of atom supplies its own share of the average. For copper, that was 0.69 of 63 amu plus 0.31 of 65 amu. For any number of isotopes, do the same thing for every kind and add the pieces. This is called a **weighted average** because a more common kind gets more weight in the result. Round only at the end so early rounding does not change the answer.
 
 $$\underbrace{\overline m}_{\text{average atomic mass, amu per atom}}=\sum_i \underbrace{f_i}_{\text{fraction of atoms of isotope }i}\ \underbrace{m_i}_{\text{mass of one atom of isotope }i,\ \mathrm{amu}}$$
 
@@ -57,14 +77,20 @@ Check: the answer lies between 63 and 65 and is closer to 63, the more common is
 
 ### Work backward: two unknown abundances
 
-If there are **exactly two isotopes**, let the first fraction be $x$. The other is $1-x$, because all atoms must be accounted for. There is only one unknown.
+Imagine a sample that contains **only two kinds of atom**. If 30 out of 100 are the first kind, the other 70 must be the second kind. There is no third kind to take any of the remaining places. That is why the two percentages must add to 100%.
+
+If you do not know the first percentage, call it $x$ percent. The second percentage must be $100-x$ percent. For example, putting $x=30$ gives $100-30=70$.
+
+For the average-mass equation, it is simpler to let $x$ mean the **decimal share**, not the percentage. A 30% share is $x=0.30$; the rest is $1-0.30=0.70$. So the two shares are $x$ and $1-x$. **Choose one scale and stay on it:** percentage shares total 100; decimal shares total 1. The worked example below uses decimal shares.
 
 **Practice:** boron-10 has mass 10.013 amu; boron-11 has mass 11.009 amu; average atomic mass is 10.81 amu. Find each percent abundance.
 
 ::: details Reveal the full unknown-abundance setup
 **Name the unknowns:** $x=f_{10\mathrm B}$, the fraction of boron atoms that are boron-10; $1-x=f_{11\mathrm B}$, the fraction that are boron-11.
 
-**Build the weighted average before doing algebra:**
+**Why this equation works:** if the sample has a share $x$ of boron-10, that share contributes $10.013x$ amu to the average. All remaining atoms are boron-11, so they contribute $11.009(1-x)$ amu. Together those contributions must equal the known average, 10.81 amu.
+
+**Write that statement as an equation:**
 
 $$10.81\ \mathrm{amu}=(10.013\ \mathrm{amu})x+(11.009\ \mathrm{amu})(1-x)$$
 
@@ -82,19 +108,23 @@ $$\%\,^{10}\mathrm B=(0.1998)(100\%)=20.0\%$$
 
 $$\%\,^{11}\mathrm B=(1-0.1998)(100\%)=80.0\%$$
 
-**Check:** both percentages are between 0 and 100 and sum to 100. Substituting 0.20 and 0.80 returns about 10.81 amu. The average is nearer 11, so boron-11 should dominate.
+**Check the meaning, not just the algebra:** the result says about 20 of every 100 atoms are boron-10 and 80 are boron-11. Substituting 0.20 and 0.80 returns about 10.81 amu. The average is much nearer 11.009 than 10.013, so having many more boron-11 atoms makes sense. Both percentages are positive and together account for all 100 atoms.
 :::
 
 Do not set the two fractions to $x$ and $x$: that assumes equal abundance. Do not use $100-x$ when $x$ is a decimal fraction; that mixes two scales. If there are three unknown fractions, one average and their sum usually are not enough to solve all three.
 
 ### Read a mass spectrum without mixing up the axes
 
+Look at the copper graph below the earlier example. The peak at **63 on the horizontal axis** is the copper-63 signal; the peak at **65** is copper-65. Their horizontal positions tell you which masses were detected. The peak at 63 reaches about **69% on the vertical axis**, meaning roughly 69 out of every 100 atoms detected are copper-63. The peak at 65 reaches about 31%, meaning the remaining 31 out of 100 are copper-65.
+
+So the two directions answer different questions: **where a peak sits tells you how heavy the detected ions are; how tall it is tells you how common they are.** A taller peak is not a heavier atom. It represents more atoms of that kind.
+
 - **Peak position (horizontal):** mass-to-charge ratio, $m/z$. For singly charged atomic ions, the numerical peak positions correspond to isotope masses in these class problems.
 - **Peak height (vertical):** relative number of ions, so relative isotope abundance in an atomic isotope spectrum. A taller peak means more common, not heavier.
 - **Different peaks for one element:** different neutrons, not different protons. Mass number is protons plus neutrons; it is not the exact measured isotope mass.
 - **Read the y-axis label.** Percent abundance adds to 100%; relative intensity may instead set the tallest peak to 100. Never assume every axis is already a percentage.
 
-**Practice:** two singly charged isotope peaks occur at masses 63 amu and 65 amu. Their relative heights are 100 and 45, not percentages. Find the average mass.
+**Practice:** two singly charged isotope peaks occur at masses 63 amu and 65 amu. Their relative heights are 100 and 45. Think of that as 100 signals from the first kind for every 45 from the second: **145 signals altogether**. The label 100 does not mean 100% of the sample; it is just the height chosen for the tallest peak. Find the average mass by giving each peak its share of all 145 signals.
 
 ::: details Reveal how to normalize peak heights
 **Add all heights first:** total relative signal is $100+45=145$ signal units.
@@ -136,6 +166,12 @@ For [Br$_2$, about 3:07–5:02](https://www.youtube.com/watch?v=QLiBIFy6QSY&t=18
 ## Light and the hydrogen spectrum
 
 Mrs. Cash: [wave lesson](https://www.youtube.com/watch?v=xZrEjwRdHKA) · [short calculation practice](https://www.youtube.com/watch?v=SeGQyJR-0SE).
+
+Imagine two wave patterns moving past you at the same speed. One has widely spaced peaks; the other has tightly packed peaks. In one second, more of the tightly packed peaks pass you. **Wavelength** is the distance from one peak to the next; **frequency** is how many peaks pass each second. That is why shorter wavelength means greater frequency for light traveling in the same medium.
+
+Light also arrives in individual packets called **photons**. A short-wavelength photon carries more energy than a long-wavelength photon. Making a lamp brighter at the same color supplies more packets; it does not make each packet stronger. For a 500 nm calculation, the equations below turn that spacing into peaks per second and then energy per packet.
+
+For the photoelectric effect, picture an electron needing a minimum payment of energy to escape a metal. One photon must supply that payment in the usual class model. Sending more photons that are each too weak does not meet the threshold. In an atom, an electron can instead move between allowed energy levels: dropping to a lower level releases the energy difference as one photon.
 
 ### What is going on
 
@@ -206,6 +242,10 @@ $E$ goes as $\dfrac{1}{\lambda}$, so 400 nm wins.
 
 Mrs. Cash: [shells and subshells](https://www.youtube.com/watch?v=15APaohQ038) · [electrons per shell](https://www.youtube.com/watch?v=y4y-Dd133jc).
 
+Read $2p^6$ as an address plus a head count. The **2** names the shell, or main energy level. The **p** names a kind of region within that shell, called a subshell. The **6** counts the electrons in that subshell. A p subshell contains three orbitals; each orbital can hold two electrons, so six electrons fill it.
+
+An orbital is not a little circular track. It describes where an electron is likely to be found. Quantum numbers give increasingly specific information about that electron: which shell, which subshell, which orbital within it, and which of the two spin states. The rules below tell you whether a proposed address is possible.
+
 ### What is going on
 
 An orbital is a region where an electron is likely to be, not an orbit. Four quantum numbers give its address: shell $n$, subshell $\ell$ (0 to $n - 1$; s, p, d, f), orbital $m_\ell$ ($-\ell$ to $+\ell$), and spin $m_s$ ($\pm\tfrac12$). Each orbital holds 2 electrons.
@@ -242,6 +282,12 @@ $\ell < n$, so the first p is 2p.
 ## Electron configurations
 
 Mrs. Cash: [electron configurations](https://www.youtube.com/watch?v=KmUtra64Eus) · [orbital notation](https://www.youtube.com/watch?v=sm-mjywGJGQ) · [ions](https://www.youtube.com/watch?v=pCPHlAZBCZw).
+
+A configuration tells you **where all the electrons go**. Neutral lithium has 3 protons and therefore 3 electrons. Its lowest-energy orbital, 1s, holds two. The remaining electron goes into 2s, giving $1s^2\,2s^1$. The superscripts add to 3, so every electron is accounted for.
+
+Why not put all three in 1s? One orbital holds at most two electrons. Why not start in 2p? For the lowest-energy arrangement, electrons occupy the available lower-energy places first. Once you reach several equal-energy orbitals, such as the three p orbitals, put one electron in each before making pairs: that avoids crowding two electrons into one orbital while another equal-energy orbital is empty.
+
+An ion changes the count. If lithium loses one electron to become Li$^+$, its outer 2s electron leaves and the configuration becomes $1s^2$. For transition metals, use the shell number to decide which electrons leave; do not simply reverse the written filling order.
 
 ### What is going on
 
@@ -296,6 +342,12 @@ Cr = [Ar] 4s$^1$ 3d$^5$ and Cu = [Ar] 4s$^1$ 3d$^{10}$
 
 Mrs. Cash: [Coulombic force, effective nuclear charge and shielding](https://www.youtube.com/watch?v=WqR_f7UrBVU) · [Coulomb's law and trends](https://www.youtube.com/watch?v=cPUUzI9oHfI).
 
+Compare sodium and chlorine. Their outer electrons occupy the same main shell, but chlorine has 17 protons pulling inward while sodium has only 11. Their inner electrons provide roughly similar shielding. Chlorine's outer electrons therefore feel a stronger inward attraction and stay in a smaller cloud.
+
+Now compare sodium and potassium. Potassium has more protons, but its outer electron occupies an additional shell farther from the nucleus, with more electrons between it and the nucleus. The extra distance and shielding make that outer electron easier to remove. **Counting protons alone cannot explain both comparisons.** You must also ask how far away the electron is and how much the inner electrons reduce the attraction it feels.
+
+The name for the remaining pull associated with nuclear charge after shielding is **effective nuclear charge**. The nucleus still has all its protons; shielding does not physically remove charge from it.
+
 ### What is going on
 
 This drives every trend. The nucleus pulls harder with more charge and much harder up close. Core electrons shield much of it; same-shell electrons shield less effectively. The protons-minus-core-electrons calculation below is a classroom estimate, not an exact effective charge. What is left is the **effective nuclear charge**, $Z_{\text{eff}}$.
@@ -348,6 +400,10 @@ More protons, same shell and shielding, so stronger attraction.
 
 Mrs. Cash: [Coulombic force and periodicity](https://www.youtube.com/watch?v=WqR_f7UrBVU).
 
+Picture the same cloud of 10 electrons around two different nuclei. O$^{2-}$ has 8 protons pulling on that cloud; Mg$^{2+}$ has 12. With the electron count held the same, the stronger positive nucleus pulls the cloud in more tightly, making Mg$^{2+}$ smaller. This is the reason behind the equal-electron-count ranking below.
+
+Making a cation can also remove an entire outer layer. Neutral sodium has an electron in shell 3; Na$^+$ has lost that electron and has no electrons left in shell 3. Its occupied cloud now ends at shell 2, so it is much smaller. Adding an electron to make an anion does not add a proton: the existing nucleus must attract more electrons, which repel one another, so the cloud usually expands.
+
 ### What is going on
 
 **Across a period**, electrons join the same shell while $Z_{\text{eff}}$ rises, so atoms shrink. **Down a group**, each row adds a shell, so atoms grow. Cations shrink and may lose an entire occupied outer shell; anions add repelling electrons and swell. With equal electron counts, more protons means smaller.
@@ -385,6 +441,12 @@ Na$^+$ lost its whole $n = 3$ shell.
 ## Ionization energy
 
 Mrs. Cash: [oxygen versus nitrogen](https://www.youtube.com/watch?v=HWegv9kQtAE) · [aluminum versus magnesium](https://www.youtube.com/watch?v=nGFBlgIG6oY) · [periodic trends](https://www.youtube.com/watch?v=cPUUzI9oHfI).
+
+Ionization energy asks: **how much energy must you supply to pull an electron away?** A strongly attracted electron takes more energy to remove, just as separating two strongly attracting objects takes more work. For atoms in the same row, the growing nuclear pull usually makes that energy rise. Down a group, the outer electron is farther away and more shielded, so removal usually costs less energy.
+
+Imagine removing magnesium's electrons one at a time. Its first two removals take its two outer-shell electrons. The third must take an inner-shell electron, much closer to the nucleus and less shielded. That is a different, much harder job, which explains the sudden jump after the second removal. The number removed **before** that jump tells you how many outer electrons there were.
+
+Two exceptions need a closer look at the orbital involved. Aluminum loses a 3p electron, which is easier to remove than magnesium's 3s electron because p electrons penetrate toward the nucleus less effectively. Oxygen loses one electron from an already paired 2p orbital; repulsion between that pair helps removal. Nitrogen's three 2p electrons occupy separate orbitals, so it lacks that extra same-orbital repulsion.
 
 ### What is going on
 
@@ -430,6 +492,10 @@ Count the IEs **before** the jump: 2.
 
 Mrs. Cash: [Coulombic force and periodicity](https://www.youtube.com/watch?v=WqR_f7UrBVU).
 
+These names answer different questions. **Ionization energy:** what does it cost to take an electron away? **Electron affinity:** what energy change occurs when a separate gaseous atom accepts an electron? **Electronegativity:** when two atoms share electrons in a bond, which atom pulls more strongly on that shared pair?
+
+For example, in an H–F bond the shared electrons spend more time nearer fluorine because fluorine attracts them strongly. That is high electronegativity; it does not mean you are removing an electron or adding one to an isolated atom. For electron affinity, a negative energy change means energy comes out when the electron joins the atom. More negative means a larger energy release, not a larger positive energy cost.
+
 ### What is going on
 
 **Electron affinity** is the energy change when a gaseous atom gains an electron. It generally gets more negative (more released) across a period as $Z_{\text{eff}}$ rises. Group 2, N and noble gases are near zero: the newcomer must start a new subshell or pair up. Cl ($-349$ kJ/mol) beats F ($-328$) because tiny F is crowded.
@@ -469,6 +535,10 @@ Cl does; crowding in F offsets its pull.
 ## Formal charge
 
 Mrs. Cash: [formal-charge calculation](https://www.youtube.com/watch?v=G0GX8_lCavQ).
+
+Imagine counting which electrons each atom owns on paper. Give an atom all its lone-pair electrons and half of each shared bond. In a structure with one single bond and three lone pairs on oxygen, oxygen is assigned 6 lone-pair electrons plus 1 electron from the bond: 7 total. Neutral oxygen normally brings 6 valence electrons, so assigning it one extra gives a formal charge of $-1$.
+
+This is bookkeeping for comparing drawings, not a measurement of the atom's actual charge. The formula below does exactly that ownership count. For an ion, the formal charges of all atoms must add to the ion's charge; they do not automatically add to zero.
 
 ### What is going on
 
@@ -514,6 +584,12 @@ They add to $-1$, the ion's charge.
 ## Photoelectron spectroscopy (PES)
 
 Mrs. Cash: [PES problems](https://www.youtube.com/watch?v=MR1p0PBtPpc).
+
+Start with lithium's three electrons: two in 1s, close to the nucleus, and one in 2s, farther out. A PES experiment uses light to knock electrons out and determines how much energy was needed to free them. The inner 1s electrons need more energy to remove than the outer 2s electron.
+
+That produces **two groups of removal energies**, so the simplified lithium graph below has two peaks. The 1s peak represents two electrons; the 2s peak represents one. Its relative intensity is therefore 2 to 1. The horizontal position answers **how tightly held?** The relative intensity answers **how many electrons?** Those are different pieces of information.
+
+Read the printed numbers before deciding which side is more tightly held. In this graph, 20 MJ/mol is on the left and 0 is on the right, so farther left means **more** energy required. A tall peak on the right can still represent weakly held electrons; tall does not mean tightly bound. Unlike mass spectrometry, these peaks are electron groups, not different isotope masses.
 
 ### What is going on
 
