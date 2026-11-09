@@ -70,6 +70,7 @@ Link to another article: [[Chain rule]] or [[chain-rule|custom label]].
 - `lib/render.mjs` renderer (markdown-it + footnotes + KaTeX + gray-matter)
 - `lib/app.mjs`, `lib/auth.mjs`, `lib/store.mjs`, `api/index.mjs` request handler, owner passkey auth, Blob store
 - `lib/ui.mjs`, `public/owner/` owner toggle and `/owner` page
+- `lib/notes.mjs`, `public/notes/` local article highlights and comments (browser storage only)
 - `build.mjs` validates articles and copies static assets → `dist/`
 - `test/` `npm test`
 - `site.css` styles, light and dark via `prefers-color-scheme`
@@ -77,6 +78,10 @@ Link to another article: [[Chain rule]] or [[chain-rule|custom label]].
 - `publish.sh` copy + build + commit + push helper
 
 This v1 renderer is a stand-in. It will be replaced by the shared wiki renderer skill; the article format above stays the same.
+
+## Reading notes
+
+On an article, select text to highlight it in a pastel color and optionally attach a comment. Notes stay in this browser, one set per article. They are not uploaded or synced. If the article text changes, a note whose original span cannot be found is kept but not drawn on some other sentence.
 
 ## Teaching blocks (learning articles)
 

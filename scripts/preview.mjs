@@ -27,7 +27,7 @@ const types = { '.css': 'text/css', '.js': 'text/javascript', '.mjs': 'text/java
 http.createServer(async (req, res) => {
   const url = new URL(`http://localhost:${port}${req.url}`);
   const file = path.join(root, 'dist', path.normalize(url.pathname));
-  if (file.startsWith(path.join(root, 'dist')) && /^\/(katex|owner|widgets)\//.test(url.pathname) && fs.existsSync(file)) {
+  if (file.startsWith(path.join(root, 'dist')) && /^\/(katex|owner|widgets|notes)\//.test(url.pathname) && fs.existsSync(file)) {
     res.writeHead(200, { 'Content-Type': types[path.extname(file)] || 'application/octet-stream' });
     return fs.createReadStream(file).pipe(res);
   }
