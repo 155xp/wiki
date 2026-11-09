@@ -1,7 +1,7 @@
 ---
 visibility: public
 title: "Chem Test: Atomic Structure and Periodicity"
-description: Step-by-step Ch 7 teaching, relative abundance, isotope averages, mass spectra, PES, configurations and trends.
+description: "Ch 7 test preparation: explain periodic trends, compare atoms and ions, interpret PES and isotope spectra, and practice configurations and waves."
 updated: 2026-11-08
 infobox:
   title: Test cheat sheet
@@ -10,12 +10,302 @@ infobox:
   Core idea: "$F \\propto \\frac{q_1 q_2}{r^2}$"
   Ions: Cations lose 4s before 3d
   Trends: "Up and right: smaller, higher IE, higher EN"
-  May be on the test: Formal charge (Chapter 8)
+  Priority: Periodicity and conceptual short-FRQ explanations
 ---
 
-**Test: Monday, November 9 at 8:00am EST.** Start with [relative abundance](#relative-abundance-and-mass-spectra) if that is the gap, then [PES](#photoelectron-spectroscopy-pes), configurations and explanations of trends. The linked videos are resources, not a requirement to watch every minute.
+**Test: Monday, November 9 at 8:00am EST.** Most of the test is periodicity and conceptual explanations. Start with Coulomb attraction, radius and ionization-energy comparisons; then do PES and mass spectra. Configurations, orbital diagrams and waves follow.
+
+**55-minute pacing:** 12 multiple-choice questions, about 18 minutes; long FRQ (a–g), about 23 minutes; shorter FRQ (a–d), about 9 minutes; short FRQ (a–c), about 5 minutes.
+
+For a comparison answer, **name both species, identify what changes, and explain the attraction**. “Farther right” or “lower on the table” describes a location, not a physical cause.
 
 Nearly every question is one idea: **an electron is held tighter when it feels more positive charge and sits closer to the nucleus.**
+
+## Coulomb's law and effective nuclear charge
+
+Mrs. Cash: [Coulombic force, effective nuclear charge and shielding](https://www.youtube.com/watch?v=WqR_f7UrBVU) · [Coulomb's law and trends](https://www.youtube.com/watch?v=cPUUzI9oHfI).
+
+Compare sodium and chlorine. Their outer electrons occupy the same main shell, but chlorine has 17 protons pulling inward while sodium has only 11. Their inner electrons provide roughly similar shielding. Chlorine's outer electrons therefore feel a stronger inward attraction and stay in a smaller cloud.
+
+Now compare sodium and potassium. Potassium has more protons, but its outer electron occupies an additional shell farther from the nucleus, with more electrons between it and the nucleus. The extra distance and shielding make that outer electron easier to remove. **Counting protons alone cannot explain both comparisons.** You must also ask how far away the electron is and how much the inner electrons reduce the attraction it feels.
+
+The name for the remaining pull associated with nuclear charge after shielding is **effective nuclear charge**. The nucleus still has all its protons; shielding does not physically remove charge from it.
+
+Core electrons shield more effectively than electrons in the same shell. We write the remaining effective nuclear charge as $Z_{\text{eff}}$; subtracting core electrons from protons is a **classroom estimate**, not its exact value.
+
+::: note The move
+$$F \propto \frac{q_1 q_2}{r^2} \qquad Z_{\text{eff}} \approx \text{protons} - \text{core electrons}$$
+
+Here $F$ is the attraction magnitude, $q_1$ and $q_2$ are charge magnitudes, and $r$ is separation. To explain a trend, compare $Z_{\text{eff}}$ and distance, then state the attraction.
+:::
+
+### Explain a trend
+
+**Across a period:** more protons, added electrons in the same main shell, roughly similar core shielding → greater effective nuclear charge → stronger nucleus–electron attraction → smaller radius and generally higher IE/EN.
+
+**Down a group:** an extra occupied shell, greater distance and shielding → weaker attraction to the outer electrons → larger radius and generally lower IE/EN. **Do not say effective nuclear charge decreases down a group.** Mrs. Cash explicitly uses distance/shielding for that comparison in [her summary, about 21:00–24:20](https://www.youtube.com/watch?v=WqR_f7UrBVU&t=1260s).
+
+**If a calculation only changes distance:** doubling distance leaves one-quarter the attraction; halving distance makes it four times as strong. Doubling one charge magnitude at fixed distance doubles attraction.
+
+### Worked example
+
+**Example 4.** Compare valence electrons in Na, Cl and K.
+
+::: details Reveal the worked solution
+1. **Na:** 11 protons minus 10 core gives about +1, in $n = 3$.
+2. **Cl:** about +7, same shell, so tighter.
+3. **K:** 19 minus 18 is about +1, but in $n = 4$, so looser.
+:::
+
+### Traps
+
+:::: compare More protons always wins
+::: wrong
+K holds its electron tighter than Na: more protons.
+:::
+::: right
+An extra core shell cancels them, and $r$ is larger.
+:::
+::::
+
+:::: compare The trend as the reason
+::: wrong
+"Cl has a higher IE because it is farther right."
+:::
+::: right
+More protons, same shell and shielding, so stronger attraction.
+:::
+::::
+
+## Atomic and ionic radius
+
+Mrs. Cash: [Coulombic force and periodicity](https://www.youtube.com/watch?v=WqR_f7UrBVU).
+
+Picture the same cloud of 10 electrons around two different nuclei. O$^{2-}$ has 8 protons pulling on that cloud; Mg$^{2+}$ has 12. With the electron count held the same, the stronger positive nucleus pulls the cloud in more tightly, making Mg$^{2+}$ smaller. This is the reason behind the equal-electron-count ranking below.
+
+Making a cation can also remove an entire outer layer. Neutral sodium has an electron in shell 3; Na$^+$ has lost that electron and has no electrons left in shell 3. Its occupied cloud now ends at shell 2, so it is much smaller. Adding an electron to make an anion does not add a proton: the existing nucleus must attract more electrons, which repel one another, so the cloud usually expands.
+
+These examples give the general trends: **across a period**, electrons join the same shell while $Z_{\text{eff}}$ rises, so atoms shrink; **down a group**, each row adds a shell, so atoms grow. For ions with the same number of electrons, use the proton comparison just illustrated rather than the neutral-atom trend.
+
+### Worked example
+
+**Example 5.** Rank O$^{2-}$, F$^-$, Na$^+$ and Mg$^{2+}$ from largest to smallest.
+
+::: details Reveal the worked solution
+1. **Count electrons.** All have 10, a tie.
+2. **Count protons:** 8, 9, 11, 12. More protons pull tighter.
+3. **Rank:** O$^{2-}$ > F$^-$ > Na$^+$ > Mg$^{2+}$.
+:::
+
+### Traps
+
+:::: compare Bigger atomic number, bigger atom
+::: wrong
+Cl is bigger than Na.
+:::
+::: right
+Same shell, more pull: Cl is 102 pm, Na 166 pm.
+:::
+::::
+
+:::: compare Cations barely shrink
+::: wrong
+Na$^+$ is about the size of Na.
+:::
+::: right
+Na$^+$ lost its whole $n = 3$ shell.
+:::
+::::
+
+## Ionization energy
+
+Mrs. Cash: [oxygen versus nitrogen](https://www.youtube.com/watch?v=HWegv9kQtAE) · [aluminum versus magnesium](https://www.youtube.com/watch?v=nGFBlgIG6oY) · [periodic trends](https://www.youtube.com/watch?v=cPUUzI9oHfI).
+
+The **first ionization energy (IE)** asks how much energy you must supply to remove the outermost electron from an isolated gaseous atom. A strongly attracted electron takes more energy to remove, just as separating two strongly attracting objects takes more work. For atoms in the same row, the growing nuclear pull usually makes that energy rise. Down a group, the outer electron is farther away and more shielded, so removal usually costs less energy.
+
+Imagine removing magnesium's electrons one at a time. Its first two removals take its two outer-shell electrons. The third must take an inner-shell electron, much closer to the nucleus and less shielded. That is a different, much harder job, which explains the sudden jump after the second removal. The number removed **before** that jump tells you how many outer electrons there were.
+
+Two exceptions need a closer look at the orbital involved. Aluminum loses a 3p electron, which is easier to remove than magnesium's 3s electron because p electrons penetrate toward the nucleus less effectively. Oxygen loses one electron from an already paired 2p orbital; repulsion between that pair helps removal. Nitrogen's three 2p electrons occupy separate orbitals, so it lacks that extra same-orbital repulsion.
+
+Each successive removal generally costs more because the ion is increasingly positive and holds its remaining electrons more tightly. The especially large jump comes when removal reaches the core.
+
+The first-IE exceptions occur from **group 2 to 13** (Be to B, Mg to Al: s versus p penetration) and **group 15 to 16** (N to O, P to S: paired-electron repulsion). Keep these two reasons separate. They do **not** explain inner-shell PES peaks; compare nuclear charge and shielding for those.
+
+### For a second or third ionization, start with the ion that exists then
+
+The second removal is **not** from the original neutral atom. Sodium first loses its lone 3s electron, leaving Na$^+$ with [Ne]. Its second removal must take a shell-2 core electron. Magnesium first loses one of its two 3s electrons, leaving Mg$^+$ with [Ne] 3s$^1$; its second removal still takes an outer-shell electron. So comparing the neutral atoms' first-IE trend would answer the wrong question.
+
+Write the electron configuration **immediately before the requested removal**: IE$_2$ starts with the $+1$ ion; IE$_3$ starts with the $+2$ ion. Decide whether each electron is inner or outer first. If the electrons occupy comparable shells/subshells, then compare nuclear attraction and shielding.
+
+### Worked example
+
+**Example 6.** An element's IEs are 738, 1451, 7733 and 10,543 kJ/mol. Which group is it in?
+
+::: details Reveal the worked solution
+1. **Find the jump.** 1451 to 7733 is over 5 times larger.
+2. **Count the IEs before it.** Two come off easily, so 2 valence electrons.
+3. **Group 2** (Mg).
+:::
+
+### Traps
+
+:::: compare IE rises smoothly across
+::: wrong
+Al beats Mg: more protons.
+:::
+::: right
+Al loses a shielded 3p electron: 578 vs 738 kJ/mol.
+:::
+::::
+
+:::: compare Counting past the jump
+::: wrong
+The jump is between IE$_2$ and IE$_3$, so 3 valence electrons.
+:::
+::: right
+Count the IEs **before** the jump: 2.
+:::
+::::
+
+## Electron affinity and electronegativity
+
+Mrs. Cash: [Coulombic force and periodicity](https://www.youtube.com/watch?v=WqR_f7UrBVU).
+
+These names answer different questions. **Ionization energy:** what does it cost to take an electron away? **Electron affinity:** what energy change occurs when a separate gaseous atom accepts an electron? **Electronegativity:** when two atoms share electrons in a bond, which atom pulls more strongly on that shared pair?
+
+For example, in an H–F bond the shared electrons spend more time nearer fluorine because fluorine attracts them strongly. That is high electronegativity; it does not mean you are removing an electron or adding one to an isolated atom. For electron affinity, a negative energy change means energy comes out when the electron joins the atom. More negative means a larger energy release, not a larger positive energy cost.
+
+Across a period, electron affinity generally becomes more negative as $Z_{\text{eff}}$ rises. Group 2, N and noble gases break the simple trend: starting a new subshell or pairing an electron can make addition weakly favorable or unfavorable rather than strongly energy-releasing. Cl ($-349$ kJ/mol) releases more energy than F ($-328$) because tiny F is crowded.
+
+Electronegativity generally rises across a period and falls down a group for the same attraction-and-distance reasons as IE. Fluorine is highest on the Pauling scale, at **3.98**.
+
+### Worked example
+
+**Example 7.** Rank N, O and Cl by electronegativity.
+
+::: details Reveal the worked solution
+1. **Same row:** O is right of N, so O > N.
+2. **Close call, use values:** O 3.44, Cl 3.16, N 3.04.
+3. **Rank:** O > Cl > N.
+:::
+
+### Traps
+
+:::: compare Chlorine is next after fluorine
+::: wrong
+Cl is more electronegative than O.
+:::
+::: right
+O (3.44) beats Cl (3.16), which is a row lower.
+:::
+::::
+
+:::: compare Fluorine has the most negative EA
+::: wrong
+F releases the most energy.
+:::
+::: right
+Cl does; crowding in F offsets its pull.
+:::
+::::
+
+## Conceptual comparison practice
+
+Try a one- or two-sentence explanation before opening each answer. Name both species and give the charge, distance, shielding or orbital reason—not just a trend arrow.
+
+**Al versus Al$^{3+}$:** which is smaller, and why?
+
+::: details Reveal Al versus its ion
+Al$^{3+}$ is smaller than Al because Al loses all three shell-3 electrons to form Al$^{3+}$. Its occupied cloud ends at shell 2 rather than shell 3; the same 13 protons attract fewer electrons, with less electron–electron repulsion.
+:::
+
+**S$^{2-}$ versus O$^{2-}$:** which is larger, and why?
+
+::: details Reveal the two anions
+S$^{2-}$ is larger than O$^{2-}$ because its outer electrons occupy shell 3 rather than shell 2. Greater distance and additional inner-shell shielding weaken the attraction to those outer electrons, despite sulfur's greater proton count.
+:::
+
+**Ne versus Na, then Ne versus Na$^+$:** why does the radius comparison change?
+
+::: details Reveal neutral atoms versus equal-electron-count species
+Na is larger than Ne because Na has an occupied third shell, whereas Ne's outer electrons are in shell 2. But Na$^+$ and Ne both have 10 electrons and configuration [Ne]. Na$^+$ is smaller than Ne because its 11 protons attract the same number of electrons more strongly than Ne's 10 protons do.
+:::
+
+**Na$^+$ versus Mg$^{2+}$:** which is smaller, and which holds its electrons more tightly?
+
+::: details Reveal the equal-electron-count cations
+Mg$^{2+}$ is smaller than Na$^+$ and holds its electrons more tightly. Both have 10 electrons in the same occupied shells, but Mg$^{2+}$ has 12 protons versus Na$^+$'s 11, producing stronger nucleus–electron attraction with comparable shielding.
+:::
+
+**O versus N:** which has a harder-to-remove 1s electron? Does the familiar first-IE exception decide this?
+
+::: details Reveal the inner-shell comparison
+O's 1s electron is harder to remove than N's 1s electron because O has 8 protons versus N's 7 attracting electrons in the same inner subshell. The O/N first-ionization exception concerns repulsion within a paired **2p** orbital; it does not reverse the 1s binding-energy comparison.
+:::
+
+**Na versus Mg:** which has the larger second ionization energy?
+
+::: details Reveal IE2 using the ions at that stage
+Na has the larger IE$_2$. Immediately before that removal, Na$^+$ is [Ne], so removal takes a shell-2 core electron. Mg$^+$ is [Ne] 3s$^1$, so removal takes its remaining shell-3 valence electron. The core electron in Na$^+$ is closer to the nucleus and less shielded, so removal costs more energy.
+:::
+
+**Mg versus Al:** which has the larger third ionization energy?
+
+::: details Reveal IE3 using the ions at that stage
+Mg has the larger IE$_3$. Mg$^{2+}$ is [Ne], so its third removal takes a core electron. Al$^{2+}$ is [Ne] 3s$^1$, so its third removal takes an outer-shell electron. Removing Mg$^{2+}$'s closer, less-shielded core electron requires more energy than removing Al$^{2+}$'s 3s electron.
+:::
+
+### Use the graphing lab as FRQ practice
+
+On your periodic-trend graphs, choose two elements in the same period and explain their difference using proton count and similar core shielding. Then choose two in the same group and explain the difference using occupied shells and distance. Name the two elements in each answer and connect the cause to the property being graphed. The graph shows the pattern; your explanation must say why it happens.
+
+## Photoelectron spectroscopy (PES)
+
+Mrs. Cash: [PES problems](https://www.youtube.com/watch?v=MR1p0PBtPpc).
+
+Start with lithium's three electrons: two in 1s, close to the nucleus, and one in 2s, farther out. A PES experiment uses light to knock electrons out and determines how much energy was needed to free them. The inner 1s electrons need more energy to remove than the outer 2s electron.
+
+That produces **two groups of removal energies**, so the simplified lithium graph below has two peaks. The 1s peak represents two electrons; the 2s peak represents one. Its relative intensity is therefore 2 to 1. The horizontal position answers **how tightly held?** The relative intensity answers **how many electrons?** Those are different pieces of information.
+
+Read the printed numbers before deciding which side is more tightly held. In this graph, 20 MJ/mol is on the left and 0 is on the right, so farther left means **more** energy required. A tall peak on the right can still represent weakly held electrons; tall does not mean tightly bound. Unlike mass spectrometry, these peaks are electron groups, not different isotope masses.
+
+In these simplified atomic diagrams, each occupied **subshell** gives one peak. Use relative peak area rather than height if the question specifies area. Mrs. Cash's energy axes may be logarithmic: read the labeled values, not equal physical spacing, when comparing energies.
+
+![Lithium PES: a high binding energy 1s peak with two electrons and a lower binding energy 2s peak with one electron.](data:image/webp;base64,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)
+
+*Source frame: [Mrs. Cash, PES, 2:30](https://www.youtube.com/watch?v=MR1p0PBtPpc&t=150s).*
+
+**How to solve:** read the axis direction; label peaks from greatest binding energy as 1s, 2s, 2p, 3s and so on; use their relative intensities to count electrons; add electrons to identify a neutral atom. When comparing the same subshell across atoms, explain a shift using nuclear charge and shielding.
+
+### Worked example
+
+**Example 9.** Peaks at 104, 6.84, 3.67 and 0.50 MJ/mol have heights 2 : 2 : 6 : 1. Identify the element.
+
+::: details Reveal the worked solution
+1. **Label from highest energy:** 1s, 2s, 2p, 3s.
+2. **Add the heights:** $2 + 2 + 6 + 1 = 11$ electrons, so sodium.
+3. **Check:** 0.50 MJ/mol matches Na's first IE (496 kJ/mol).
+:::
+
+### Traps
+
+:::: compare Height means energy
+::: wrong
+The tallest peak is held most tightly.
+:::
+::: right
+Height is electron count. Tightness is position.
+:::
+::::
+
+:::: compare Same subshell, same spot
+::: wrong
+The 1s peaks of B and F line up.
+:::
+::: right
+F has 9 protons vs 5, so its peaks sit at higher energy.
+:::
+::::
 
 ## Relative abundance and mass spectra
 
@@ -157,7 +447,130 @@ For [Br$_2$, about 3:07–5:02](https://www.youtube.com/watch?v=QLiBIFy6QSY&t=18
 | What does relative intensity tell you? | Relative abundance of ions | Relative electron count per subshell |
 | What should you calculate? | Isotope weighted average or abundances | Configuration, electron count, binding-energy comparison |
 
+## Relative-abundance check
 
+**Average first:** a sample has 25.0% isotope A (20.0 amu) and 75.0% isotope B (22.0 amu). Set up the weighted average before opening the solution.
+
+::: details Reveal the weighted average
+$$\overline m=\left(\frac{25.0\ \text{A atoms}}{100\ \text{sample atoms}}\right)(20.0\ \mathrm{amu\ per\ A\ atom})+\left(\frac{75.0\ \text{B atoms}}{100\ \text{sample atoms}}\right)(22.0\ \mathrm{amu\ per\ B\ atom})=21.5\ \mathrm{amu}$$
+It is nearer 22 than 20 because isotope B is more common.
+:::
+
+**Work backward:** two isotopes have masses 24.0 amu and 26.0 amu; the average is 24.6 amu. Find the percent of the lighter isotope.
+
+::: details Reveal the unknown abundance
+Let $x$ be the fraction of mass-24 atoms and $1-x$ the fraction of mass-26 atoms.
+
+$$24.6\ \mathrm{amu}=(24.0\ \mathrm{amu})x+(26.0\ \mathrm{amu})(1-x)$$
+
+$$x=\frac{26.0\ \mathrm{amu}-24.6\ \mathrm{amu}}{26.0\ \mathrm{amu}-24.0\ \mathrm{amu}}=0.700\ \text{fraction of mass-24 atoms}$$
+
+Mass-24 abundance is $(0.700)(100\%)=70.0\%$; mass-26 abundance is $30.0\%$.
+:::
+
+**Read the axis:** one peak has intensity 20 and another 60. Is the first isotope 20% abundant?
+
+::: details Reveal the normalization
+No. Total signal is 80 units.
+
+$$f_{\text{first isotope}}=\frac{20\ \text{first-peak signal units}}{80\ \text{total signal units}}=0.25\ \text{fraction}=25\%$$
+:::
+
+## Electron configurations
+
+Mrs. Cash: [electron configurations](https://www.youtube.com/watch?v=KmUtra64Eus) · [orbital notation](https://www.youtube.com/watch?v=sm-mjywGJGQ) · [ions](https://www.youtube.com/watch?v=pCPHlAZBCZw).
+
+A configuration tells you **where all the electrons go**. Neutral lithium has 3 protons and therefore 3 electrons. Its lowest-energy orbital, 1s, holds two. The remaining electron goes into 2s, giving $1s^2\,2s^1$. The superscripts add to 3, so every electron is accounted for.
+
+Why not put all three in 1s? One orbital holds at most two electrons. Why not start in 2p? For the lowest-energy arrangement, electrons occupy the available lower-energy places first. Once you reach several equal-energy orbitals, such as the three p orbitals, put one electron in each before making pairs: that avoids crowding two electrons into one orbital while another equal-energy orbital is empty.
+
+An ion changes the count. If lithium loses one electron to become Li$^+$, its outer 2s electron leaves and the configuration becomes $1s^2$. For transition metals, use the shell number to decide which electrons leave; do not simply reverse the written filling order.
+
+For the elements covered here, the filling sequence is **1s 2s 2p 3s 3p 4s 3d 4p**. The named exceptions are Cr and Cu: their ground states have one 4s electron and a half-filled 3d$^5$ or filled 3d$^{10}$ subshell. Those arrangements are lower in energy than the simple filling pattern would predict; their configurations appear in the comparison below.
+
+### Build one without guessing
+
+**Count electrons first:** a neutral atom has its atomic number of electrons; subtract the positive charge for a cation or add the magnitude of a negative charge for an anion. Fill subshells in order, obey their capacities, then check that the superscripts add to your electron count.
+
+| Subshell | Orbitals | Maximum electrons | Orbital-box rule |
+|---|---:|---:|---|
+| s | 1 | 2 | One pair at most |
+| p | 3 | 6 | Put one electron in each box before pairing |
+| d | 5 | 10 | Put one electron in each box before pairing |
+| f | 7 | 14 | Put one electron in each box before pairing |
+
+**Pauli:** two electrons in the same orbital must have opposite spins. **Hund:** in equal-energy orbitals, fill singly with parallel spins before pairing. Unpaired electrons make a species paramagnetic; if all are paired it is diamagnetic. Mrs. Cash: [magnetic-properties lab](https://www.youtube.com/watch?v=HnQbO1umE1I).
+
+**For a transition-metal ion:** write the neutral configuration first; remove the electrons with the greatest shell number $n$ first. Filling 4s before 3d does **not** mean removing 3d before 4s.
+
+### Worked example
+
+**Example 3.** Write Fe$^{3+}$.
+
+::: details Reveal the worked solution
+1. **Neutral Fe** has 26 electrons: [Ar] 4s$^2$ 3d$^6$.
+2. **Remove 4s first**, the highest $n$: [Ar] 3d$^6$.
+3. **Then one 3d:** [Ar] 3d$^5$, all five unpaired.
+:::
+
+### Traps
+
+:::: compare Removing 3d first
+::: wrong
+Fe$^{2+}$ = [Ar] 4s$^2$ 3d$^4$
+:::
+::: right
+4s leaves first: [Ar] 3d$^6$
+:::
+::::
+
+:::: compare Missing the exceptions
+::: wrong
+Cr = [Ar] 4s$^2$ 3d$^4$ and Cu = [Ar] 4s$^2$ 3d$^9$
+:::
+::: right
+Cr = [Ar] 4s$^1$ 3d$^5$ and Cu = [Ar] 4s$^1$ 3d$^{10}$
+:::
+::::
+
+## Quantum numbers and orbitals
+
+Mrs. Cash: [shells and subshells](https://www.youtube.com/watch?v=15APaohQ038) · [electrons per shell](https://www.youtube.com/watch?v=y4y-Dd133jc).
+
+Read $2p^6$ as an address plus a head count. The **2** names the shell, or main energy level. The **p** names a kind of region within that shell, called a subshell. The **6** counts the electrons in that subshell. A p subshell contains three orbitals; each orbital can hold two electrons, so six electrons fill it.
+
+An orbital is not a little circular track. It describes where an electron is likely to be found. Quantum numbers give increasingly specific information about that electron: which shell, which subshell, which orbital within it, and which of the two spin states. The rules below tell you whether a proposed address is possible.
+
+To check an address, use these allowed values: shell $n$ is a positive integer; subshell $\ell$ runs from 0 to $n - 1$ (0, 1, 2, 3 mean s, p, d, f); orbital $m_\ell$ runs in integer steps from $-\ell$ to $+\ell$; spin $m_s$ is $\pm\tfrac12$. For shell 2, $\ell$ can only be 0 or 1, so 2s and 2p exist but 2d does not.
+
+### Worked example
+
+**Example 2.** Is $(n, \ell, m_\ell, m_s) = (2, 2, 1, +\tfrac12)$ allowed?
+
+::: details Reveal the worked solution
+1. **Check $\ell$.** It only goes up to $n - 1 = 1$.
+2. **So no.** That would be a 2d orbital.
+:::
+
+### Traps
+
+:::: compare A p subshell holds 3 electrons
+::: wrong
+p has 3 orbitals, so 3 electrons.
+:::
+::: right
+3 orbitals with 2 electrons each gives 6.
+:::
+::::
+
+:::: compare Inventing 1p
+::: wrong
+$n = 1$ has a p subshell.
+:::
+::: right
+$\ell < n$, so the first p is 2p.
+:::
+::::
 
 ## Light and the hydrogen spectrum
 
@@ -230,406 +643,6 @@ $E$ goes as $\dfrac{1}{\lambda}$, so 400 nm wins.
 :::
 ::::
 
-## Quantum numbers and orbitals
-
-Mrs. Cash: [shells and subshells](https://www.youtube.com/watch?v=15APaohQ038) · [electrons per shell](https://www.youtube.com/watch?v=y4y-Dd133jc).
-
-Read $2p^6$ as an address plus a head count. The **2** names the shell, or main energy level. The **p** names a kind of region within that shell, called a subshell. The **6** counts the electrons in that subshell. A p subshell contains three orbitals; each orbital can hold two electrons, so six electrons fill it.
-
-An orbital is not a little circular track. It describes where an electron is likely to be found. Quantum numbers give increasingly specific information about that electron: which shell, which subshell, which orbital within it, and which of the two spin states. The rules below tell you whether a proposed address is possible.
-
-To check an address, use these allowed values: shell $n$ is a positive integer; subshell $\ell$ runs from 0 to $n - 1$ (0, 1, 2, 3 mean s, p, d, f); orbital $m_\ell$ runs in integer steps from $-\ell$ to $+\ell$; spin $m_s$ is $\pm\tfrac12$. For shell 2, $\ell$ can only be 0 or 1, so 2s and 2p exist but 2d does not.
-
-### Worked example
-
-**Example 2.** Is $(n, \ell, m_\ell, m_s) = (2, 2, 1, +\tfrac12)$ allowed?
-
-::: details Reveal the worked solution
-1. **Check $\ell$.** It only goes up to $n - 1 = 1$.
-2. **So no.** That would be a 2d orbital.
-:::
-
-### Traps
-
-:::: compare A p subshell holds 3 electrons
-::: wrong
-p has 3 orbitals, so 3 electrons.
-:::
-::: right
-3 orbitals with 2 electrons each gives 6.
-:::
-::::
-
-:::: compare Inventing 1p
-::: wrong
-$n = 1$ has a p subshell.
-:::
-::: right
-$\ell < n$, so the first p is 2p.
-:::
-::::
-
-## Electron configurations
-
-Mrs. Cash: [electron configurations](https://www.youtube.com/watch?v=KmUtra64Eus) · [orbital notation](https://www.youtube.com/watch?v=sm-mjywGJGQ) · [ions](https://www.youtube.com/watch?v=pCPHlAZBCZw).
-
-A configuration tells you **where all the electrons go**. Neutral lithium has 3 protons and therefore 3 electrons. Its lowest-energy orbital, 1s, holds two. The remaining electron goes into 2s, giving $1s^2\,2s^1$. The superscripts add to 3, so every electron is accounted for.
-
-Why not put all three in 1s? One orbital holds at most two electrons. Why not start in 2p? For the lowest-energy arrangement, electrons occupy the available lower-energy places first. Once you reach several equal-energy orbitals, such as the three p orbitals, put one electron in each before making pairs: that avoids crowding two electrons into one orbital while another equal-energy orbital is empty.
-
-An ion changes the count. If lithium loses one electron to become Li$^+$, its outer 2s electron leaves and the configuration becomes $1s^2$. For transition metals, use the shell number to decide which electrons leave; do not simply reverse the written filling order.
-
-For the elements covered here, the filling sequence is **1s 2s 2p 3s 3p 4s 3d 4p**. The named exceptions are Cr and Cu: their ground states have one 4s electron and a half-filled 3d$^5$ or filled 3d$^{10}$ subshell. Those arrangements are lower in energy than the simple filling pattern would predict; their configurations appear in the comparison below.
-
-### Build one without guessing
-
-**Count electrons first:** a neutral atom has its atomic number of electrons; subtract the positive charge for a cation or add the magnitude of a negative charge for an anion. Fill subshells in order, obey their capacities, then check that the superscripts add to your electron count.
-
-| Subshell | Orbitals | Maximum electrons | Orbital-box rule |
-|---|---:|---:|---|
-| s | 1 | 2 | One pair at most |
-| p | 3 | 6 | Put one electron in each box before pairing |
-| d | 5 | 10 | Put one electron in each box before pairing |
-| f | 7 | 14 | Put one electron in each box before pairing |
-
-**Pauli:** two electrons in the same orbital must have opposite spins. **Hund:** in equal-energy orbitals, fill singly with parallel spins before pairing. Unpaired electrons make a species paramagnetic; if all are paired it is diamagnetic. Mrs. Cash: [magnetic-properties lab](https://www.youtube.com/watch?v=HnQbO1umE1I).
-
-**For a transition-metal ion:** write the neutral configuration first; remove the electrons with the greatest shell number $n$ first. Filling 4s before 3d does **not** mean removing 3d before 4s.
-
-### Worked example
-
-**Example 3.** Write Fe$^{3+}$.
-
-::: details Reveal the worked solution
-1. **Neutral Fe** has 26 electrons: [Ar] 4s$^2$ 3d$^6$.
-2. **Remove 4s first**, the highest $n$: [Ar] 3d$^6$.
-3. **Then one 3d:** [Ar] 3d$^5$, all five unpaired.
-:::
-
-### Traps
-
-:::: compare Removing 3d first
-::: wrong
-Fe$^{2+}$ = [Ar] 4s$^2$ 3d$^4$
-:::
-::: right
-4s leaves first: [Ar] 3d$^6$
-:::
-::::
-
-:::: compare Missing the exceptions
-::: wrong
-Cr = [Ar] 4s$^2$ 3d$^4$ and Cu = [Ar] 4s$^2$ 3d$^9$
-:::
-::: right
-Cr = [Ar] 4s$^1$ 3d$^5$ and Cu = [Ar] 4s$^1$ 3d$^{10}$
-:::
-::::
-
-## Coulomb's law and effective nuclear charge
-
-Mrs. Cash: [Coulombic force, effective nuclear charge and shielding](https://www.youtube.com/watch?v=WqR_f7UrBVU) · [Coulomb's law and trends](https://www.youtube.com/watch?v=cPUUzI9oHfI).
-
-Compare sodium and chlorine. Their outer electrons occupy the same main shell, but chlorine has 17 protons pulling inward while sodium has only 11. Their inner electrons provide roughly similar shielding. Chlorine's outer electrons therefore feel a stronger inward attraction and stay in a smaller cloud.
-
-Now compare sodium and potassium. Potassium has more protons, but its outer electron occupies an additional shell farther from the nucleus, with more electrons between it and the nucleus. The extra distance and shielding make that outer electron easier to remove. **Counting protons alone cannot explain both comparisons.** You must also ask how far away the electron is and how much the inner electrons reduce the attraction it feels.
-
-The name for the remaining pull associated with nuclear charge after shielding is **effective nuclear charge**. The nucleus still has all its protons; shielding does not physically remove charge from it.
-
-Core electrons shield more effectively than electrons in the same shell. We write the remaining effective nuclear charge as $Z_{\text{eff}}$; subtracting core electrons from protons is a **classroom estimate**, not its exact value.
-
-::: note The move
-$$F \propto \frac{q_1 q_2}{r^2} \qquad Z_{\text{eff}} \approx \text{protons} - \text{core electrons}$$
-
-Here $F$ is the attraction magnitude, $q_1$ and $q_2$ are charge magnitudes, and $r$ is separation. To explain a trend, compare $Z_{\text{eff}}$ and distance, then state the attraction.
-:::
-
-### Explain a trend
-
-**Across a period:** more protons, added electrons in the same main shell, roughly similar core shielding → greater effective nuclear charge → stronger nucleus–electron attraction → smaller radius and generally higher IE/EN.
-
-**Down a group:** an extra occupied shell, greater distance and shielding → weaker attraction to the outer electrons → larger radius and generally lower IE/EN. **Do not say effective nuclear charge decreases down a group.** Mrs. Cash explicitly uses distance/shielding for that comparison in [her summary, about 21:00–24:20](https://www.youtube.com/watch?v=WqR_f7UrBVU&t=1260s).
-
-**If a calculation only changes distance:** doubling distance leaves one-quarter the attraction; halving distance makes it four times as strong. Doubling one charge magnitude at fixed distance doubles attraction.
-
-### Worked example
-
-**Example 4.** Compare valence electrons in Na, Cl and K.
-
-::: details Reveal the worked solution
-1. **Na:** 11 protons minus 10 core gives about +1, in $n = 3$.
-2. **Cl:** about +7, same shell, so tighter.
-3. **K:** 19 minus 18 is about +1, but in $n = 4$, so looser.
-:::
-
-### Traps
-
-:::: compare More protons always wins
-::: wrong
-K holds its electron tighter than Na: more protons.
-:::
-::: right
-An extra core shell cancels them, and $r$ is larger.
-:::
-::::
-
-:::: compare The trend as the reason
-::: wrong
-"Cl has a higher IE because it is farther right."
-:::
-::: right
-More protons, same shell and shielding, so stronger attraction.
-:::
-::::
-
-## Atomic and ionic radius
-
-Mrs. Cash: [Coulombic force and periodicity](https://www.youtube.com/watch?v=WqR_f7UrBVU).
-
-Picture the same cloud of 10 electrons around two different nuclei. O$^{2-}$ has 8 protons pulling on that cloud; Mg$^{2+}$ has 12. With the electron count held the same, the stronger positive nucleus pulls the cloud in more tightly, making Mg$^{2+}$ smaller. This is the reason behind the equal-electron-count ranking below.
-
-Making a cation can also remove an entire outer layer. Neutral sodium has an electron in shell 3; Na$^+$ has lost that electron and has no electrons left in shell 3. Its occupied cloud now ends at shell 2, so it is much smaller. Adding an electron to make an anion does not add a proton: the existing nucleus must attract more electrons, which repel one another, so the cloud usually expands.
-
-These examples give the general trends: **across a period**, electrons join the same shell while $Z_{\text{eff}}$ rises, so atoms shrink; **down a group**, each row adds a shell, so atoms grow. For ions with the same number of electrons, use the proton comparison just illustrated rather than the neutral-atom trend.
-
-### Worked example
-
-**Example 5.** Rank O$^{2-}$, F$^-$, Na$^+$ and Mg$^{2+}$ from largest to smallest.
-
-::: details Reveal the worked solution
-1. **Count electrons.** All have 10, a tie.
-2. **Count protons:** 8, 9, 11, 12. More protons pull tighter.
-3. **Rank:** O$^{2-}$ > F$^-$ > Na$^+$ > Mg$^{2+}$.
-:::
-
-### Traps
-
-:::: compare Bigger atomic number, bigger atom
-::: wrong
-Cl is bigger than Na.
-:::
-::: right
-Same shell, more pull: Cl is 102 pm, Na 166 pm.
-:::
-::::
-
-:::: compare Cations barely shrink
-::: wrong
-Na$^+$ is about the size of Na.
-:::
-::: right
-Na$^+$ lost its whole $n = 3$ shell.
-:::
-::::
-
-## Ionization energy
-
-Mrs. Cash: [oxygen versus nitrogen](https://www.youtube.com/watch?v=HWegv9kQtAE) · [aluminum versus magnesium](https://www.youtube.com/watch?v=nGFBlgIG6oY) · [periodic trends](https://www.youtube.com/watch?v=cPUUzI9oHfI).
-
-The **first ionization energy (IE)** asks how much energy you must supply to remove the outermost electron from an isolated gaseous atom. A strongly attracted electron takes more energy to remove, just as separating two strongly attracting objects takes more work. For atoms in the same row, the growing nuclear pull usually makes that energy rise. Down a group, the outer electron is farther away and more shielded, so removal usually costs less energy.
-
-Imagine removing magnesium's electrons one at a time. Its first two removals take its two outer-shell electrons. The third must take an inner-shell electron, much closer to the nucleus and less shielded. That is a different, much harder job, which explains the sudden jump after the second removal. The number removed **before** that jump tells you how many outer electrons there were.
-
-Two exceptions need a closer look at the orbital involved. Aluminum loses a 3p electron, which is easier to remove than magnesium's 3s electron because p electrons penetrate toward the nucleus less effectively. Oxygen loses one electron from an already paired 2p orbital; repulsion between that pair helps removal. Nitrogen's three 2p electrons occupy separate orbitals, so it lacks that extra same-orbital repulsion.
-
-Each successive removal generally costs more because the ion is increasingly positive and holds its remaining electrons more tightly. The especially large jump comes when removal reaches the core.
-
-The first-IE exceptions occur from **group 2 to 13** (Be to B, Mg to Al: s versus p penetration) and **group 15 to 16** (N to O, P to S: paired-electron repulsion). Keep these two reasons separate. They do **not** explain inner-shell PES peaks; compare nuclear charge and shielding for those.
-
-### Worked example
-
-**Example 6.** An element's IEs are 738, 1451, 7733 and 10,543 kJ/mol. Which group is it in?
-
-::: details Reveal the worked solution
-1. **Find the jump.** 1451 to 7733 is over 5 times larger.
-2. **Count the IEs before it.** Two come off easily, so 2 valence electrons.
-3. **Group 2** (Mg).
-:::
-
-### Traps
-
-:::: compare IE rises smoothly across
-::: wrong
-Al beats Mg: more protons.
-:::
-::: right
-Al loses a shielded 3p electron: 578 vs 738 kJ/mol.
-:::
-::::
-
-:::: compare Counting past the jump
-::: wrong
-The jump is between IE$_2$ and IE$_3$, so 3 valence electrons.
-:::
-::: right
-Count the IEs **before** the jump: 2.
-:::
-::::
-
-## Electron affinity and electronegativity
-
-Mrs. Cash: [Coulombic force and periodicity](https://www.youtube.com/watch?v=WqR_f7UrBVU).
-
-These names answer different questions. **Ionization energy:** what does it cost to take an electron away? **Electron affinity:** what energy change occurs when a separate gaseous atom accepts an electron? **Electronegativity:** when two atoms share electrons in a bond, which atom pulls more strongly on that shared pair?
-
-For example, in an H–F bond the shared electrons spend more time nearer fluorine because fluorine attracts them strongly. That is high electronegativity; it does not mean you are removing an electron or adding one to an isolated atom. For electron affinity, a negative energy change means energy comes out when the electron joins the atom. More negative means a larger energy release, not a larger positive energy cost.
-
-Across a period, electron affinity generally becomes more negative as $Z_{\text{eff}}$ rises. Group 2, N and noble gases break the simple trend: starting a new subshell or pairing an electron can make addition weakly favorable or unfavorable rather than strongly energy-releasing. Cl ($-349$ kJ/mol) releases more energy than F ($-328$) because tiny F is crowded.
-
-Electronegativity generally rises across a period and falls down a group for the same attraction-and-distance reasons as IE. Fluorine is highest on the Pauling scale, at **3.98**.
-
-### Worked example
-
-**Example 7.** Rank N, O and Cl by electronegativity.
-
-::: details Reveal the worked solution
-1. **Same row:** O is right of N, so O > N.
-2. **Close call, use values:** O 3.44, Cl 3.16, N 3.04.
-3. **Rank:** O > Cl > N.
-:::
-
-### Traps
-
-:::: compare Chlorine is next after fluorine
-::: wrong
-Cl is more electronegative than O.
-:::
-::: right
-O (3.44) beats Cl (3.16), which is a row lower.
-:::
-::::
-
-:::: compare Fluorine has the most negative EA
-::: wrong
-F releases the most energy.
-:::
-::: right
-Cl does; crowding in F offsets its pull.
-:::
-::::
-
-## Formal charge
-
-Mrs. Cash: [formal-charge calculation](https://www.youtube.com/watch?v=G0GX8_lCavQ).
-
-Imagine counting which electrons each atom owns on paper. Give an atom all its lone-pair electrons and half of each shared bond. In a structure with one single bond and three lone pairs on oxygen, oxygen is assigned 6 lone-pair electrons plus 1 electron from the bond: 7 total. Neutral oxygen normally brings 6 valence electrons, so assigning it one extra gives a formal charge of $-1$.
-
-This is bookkeeping for comparing drawings, not a measurement of the atom's actual charge. The formula below does exactly that ownership count. For an ion, the formal charges of all atoms must add to the ion's charge; they do not automatically add to zero.
-
-An atom assigned more electrons than its neutral valence count has negative formal charge; one assigned fewer has positive formal charge. To compare otherwise valid Lewis structures, favor smaller formal-charge magnitudes and, when that ties, negative charge on the more electronegative atom. These are comparison rules, not a direct measurement of resonance contributions.
-
-::: note The move
-$$\text{FC} = \text{valence} - \text{nonbonding } e^- - \tfrac12(\text{bonding } e^-)$$
-:::
-
-### Worked example
-
-**Example 8.** Pick the best SCN$^-$ structure. Valence: S 6, C 4, N 5.
-
-::: details Reveal the worked solution
-1. **[S=C=N]$^-$:** S is $6 - 4 - 2 = 0$, C is $4 - 0 - 4 = 0$, N is $5 - 4 - 2 = -1$.
-2. **[S≡C–N]$^-$:** S is $6 - 2 - 3 = +1$, N is $5 - 6 - 1 = -2$. Bigger charges, so worst.
-3. **[S–C≡N]$^-$:** S is $6 - 6 - 1 = -1$, N is 0. Each structure sums to $-1$.
-4. **Using the formal-charge/electronegativity heuristic, pick [S=C=N]$^-$.** Its $-1$ is on N (EN 3.04), not S (2.58). Both low-charge structures are resonance contributors; formal charge alone does not measure their actual weights.
-:::
-
-### Traps
-
-:::: compare Forgetting the half
-::: wrong
-C in [S=C=N]$^-$ owns all 8 bonding electrons: $4 - 0 - 8 = -4$.
-:::
-::: right
-It owns half of them: $4 - 0 - 4 = 0$.
-:::
-::::
-
-:::: compare Sum to zero
-::: wrong
-The formal charges in SCN$^-$ add to 0.
-:::
-::: right
-They add to $-1$, the ion's charge.
-:::
-::::
-
-## Photoelectron spectroscopy (PES)
-
-Mrs. Cash: [PES problems](https://www.youtube.com/watch?v=MR1p0PBtPpc).
-
-Start with lithium's three electrons: two in 1s, close to the nucleus, and one in 2s, farther out. A PES experiment uses light to knock electrons out and determines how much energy was needed to free them. The inner 1s electrons need more energy to remove than the outer 2s electron.
-
-That produces **two groups of removal energies**, so the simplified lithium graph below has two peaks. The 1s peak represents two electrons; the 2s peak represents one. Its relative intensity is therefore 2 to 1. The horizontal position answers **how tightly held?** The relative intensity answers **how many electrons?** Those are different pieces of information.
-
-Read the printed numbers before deciding which side is more tightly held. In this graph, 20 MJ/mol is on the left and 0 is on the right, so farther left means **more** energy required. A tall peak on the right can still represent weakly held electrons; tall does not mean tightly bound. Unlike mass spectrometry, these peaks are electron groups, not different isotope masses.
-
-In these simplified atomic diagrams, each occupied **subshell** gives one peak. Use relative peak area rather than height if the question specifies area. Mrs. Cash's energy axes may be logarithmic: read the labeled values, not equal physical spacing, when comparing energies.
-
-![Lithium PES: a high binding energy 1s peak with two electrons and a lower binding energy 2s peak with one electron.](data:image/webp;base64,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)
-
-*Source frame: [Mrs. Cash, PES, 2:30](https://www.youtube.com/watch?v=MR1p0PBtPpc&t=150s).*
-
-**How to solve:** read the axis direction; label peaks from greatest binding energy as 1s, 2s, 2p, 3s and so on; use their relative intensities to count electrons; add electrons to identify a neutral atom. When comparing the same subshell across atoms, explain a shift using nuclear charge and shielding.
-
-### Worked example
-
-**Example 9.** Peaks at 104, 6.84, 3.67 and 0.50 MJ/mol have heights 2 : 2 : 6 : 1. Identify the element.
-
-::: details Reveal the worked solution
-1. **Label from highest energy:** 1s, 2s, 2p, 3s.
-2. **Add the heights:** $2 + 2 + 6 + 1 = 11$ electrons, so sodium.
-3. **Check:** 0.50 MJ/mol matches Na's first IE (496 kJ/mol).
-:::
-
-### Traps
-
-:::: compare Height means energy
-::: wrong
-The tallest peak is held most tightly.
-:::
-::: right
-Height is electron count. Tightness is position.
-:::
-::::
-
-:::: compare Same subshell, same spot
-::: wrong
-The 1s peaks of B and F line up.
-:::
-::: right
-F has 9 protons vs 5, so its peaks sit at higher energy.
-:::
-::::
-
-## Relative-abundance check
-
-**Average first:** a sample has 25.0% isotope A (20.0 amu) and 75.0% isotope B (22.0 amu). Set up the weighted average before opening the solution.
-
-::: details Reveal the weighted average
-$$\overline m=\left(\frac{25.0\ \text{A atoms}}{100\ \text{sample atoms}}\right)(20.0\ \mathrm{amu\ per\ A\ atom})+\left(\frac{75.0\ \text{B atoms}}{100\ \text{sample atoms}}\right)(22.0\ \mathrm{amu\ per\ B\ atom})=21.5\ \mathrm{amu}$$
-It is nearer 22 than 20 because isotope B is more common.
-:::
-
-**Work backward:** two isotopes have masses 24.0 amu and 26.0 amu; the average is 24.6 amu. Find the percent of the lighter isotope.
-
-::: details Reveal the unknown abundance
-Let $x$ be the fraction of mass-24 atoms and $1-x$ the fraction of mass-26 atoms.
-
-$$24.6\ \mathrm{amu}=(24.0\ \mathrm{amu})x+(26.0\ \mathrm{amu})(1-x)$$
-
-$$x=\frac{26.0\ \mathrm{amu}-24.6\ \mathrm{amu}}{26.0\ \mathrm{amu}-24.0\ \mathrm{amu}}=0.700\ \text{fraction of mass-24 atoms}$$
-
-Mass-24 abundance is $(0.700)(100\%)=70.0\%$; mass-26 abundance is $30.0\%$.
-:::
-
-**Read the axis:** one peak has intensity 20 and another 60. Is the first isotope 20% abundant?
-
-::: details Reveal the normalization
-No. Total signal is 80 units.
-
-$$f_{\text{first isotope}}=\frac{20\ \text{first-peak signal units}}{80\ \text{total signal units}}=0.25\ \text{fraction}=25\%$$
-:::
-
 ## Practice quiz
 
 **1.** (Multiple choice) Co$^{2+}$ is
@@ -664,13 +677,6 @@ $$f_{\text{first isotope}}=\frac{20\ \text{first-peak signal units}}{80\ \text{t
 - **C.** $n = 4$ to $n = 2$
 - **D.** $n = 1$ to $n = 3$
 
-**7.** (Multiple choice) Which OCN$^-$ structure is best?
-
-- **A.** [O=C=N]$^-$
-- **B.** [O≡C–N]$^-$
-- **C.** [O–C≡N]$^-$
-- **D.** All equal
-
 ## Answer key
 
 ::: details 1. Answer
@@ -697,13 +703,9 @@ $$f_{\text{first isotope}}=\frac{20\ \text{first-peak signal units}}{80\ \text{t
 **Answer: A.** Smallest emission gap, so longest wavelength (656 nm); D is absorption.
 :::
 
-::: details 7. Answer
-**Answer: C.** Its only charge, $-1$, sits on O, the most electronegative atom; A puts it on N and B has $+1$ and $-2$.
-:::
-
 ## Video sources and transcript status
 
-**Sources and scope:** the links below include 12 Ch 7 resources and 4 related resources. The Schoology unit list was not rechecked, so this is not a confirmed complete assignment list. Formal charge is possible Chapter 8 crossover; the magnetic-properties lab and detailed electron-affinity exceptions are supplemental. Copper uses Mrs. Cash's displayed example; the other calculation exercises are practice examples. No separate public lesson was found for Bohr, photoelectric effect, quantum numbers or unknown isotope abundance.
+**Sources and scope:** the reported teacher outline prioritizes periodicity and conceptual FRQs, with PES and mass spectrometry from the last assigned video and the Lab Assignments worksheet/key. The worksheet/key contents and exact last-assigned video were not independently verified here; the linked PES/mass-spec lessons are study resources, not a claim to reproduce that worksheet. The public playlist links below include 12 Ch 7 resources and 4 related resources. Copper uses Mrs. Cash's displayed example; the other calculation exercises are practice examples. The Schoology unit list was not rechecked. Formal charge, the magnetic-properties lab and detailed electron-affinity exceptions are not named priorities in the reported outline.
 
 **Transcripts:** automatic captions, except mass spectrometry, which uses local audio transcription because captions were unavailable. Transcripts may misrecognize chemistry terms and numbers.
 
@@ -728,3 +730,62 @@ $$f_{\text{first isotope}}=\frac{20\ \text{first-peak signal units}}{80\ \text{t
 
 Two playlist entries are private: [jB5HlaAy6OM](https://www.youtube.com/watch?v=jB5HlaAy6OM) and [wmerMZqanaI](https://www.youtube.com/watch?v=wmerMZqanaI). Their titles and unit relevance could not be identified; no transcript is claimed for either.
 
+::::: details Optional reference: formal charge
+This topic is not named in the reported test outline; it is not a priority here. That does not establish that it is definitely excluded.
+
+**Formal charge**
+
+Mrs. Cash: [formal-charge calculation](https://www.youtube.com/watch?v=G0GX8_lCavQ).
+
+Imagine counting which electrons each atom owns on paper. Give an atom all its lone-pair electrons and half of each shared bond. In a structure with one single bond and three lone pairs on oxygen, oxygen is assigned 6 lone-pair electrons plus 1 electron from the bond: 7 total. Neutral oxygen normally brings 6 valence electrons, so assigning it one extra gives a formal charge of $-1$.
+
+This is bookkeeping for comparing drawings, not a measurement of the atom's actual charge. The formula below does exactly that ownership count. For an ion, the formal charges of all atoms must add to the ion's charge; they do not automatically add to zero.
+
+An atom assigned more electrons than its neutral valence count has negative formal charge; one assigned fewer has positive formal charge. To compare otherwise valid Lewis structures, favor smaller formal-charge magnitudes and, when that ties, negative charge on the more electronegative atom. These are comparison rules, not a direct measurement of resonance contributions.
+
+::: note The move
+$$\text{FC} = \text{valence} - \text{nonbonding } e^- - \tfrac12(\text{bonding } e^-)$$
+:::
+
+**Worked example**
+
+**Example 8.** Pick the best SCN$^-$ structure. Valence: S 6, C 4, N 5.
+
+::: details Reveal the worked solution
+1. **[S=C=N]$^-$:** S is $6 - 4 - 2 = 0$, C is $4 - 0 - 4 = 0$, N is $5 - 4 - 2 = -1$.
+2. **[S≡C–N]$^-$:** S is $6 - 2 - 3 = +1$, N is $5 - 6 - 1 = -2$. Bigger charges, so worst.
+3. **[S–C≡N]$^-$:** S is $6 - 6 - 1 = -1$, N is 0. Each structure sums to $-1$.
+4. **Using the formal-charge/electronegativity heuristic, pick [S=C=N]$^-$.** Its $-1$ is on N (EN 3.04), not S (2.58). Both low-charge structures are resonance contributors; formal charge alone does not measure their actual weights.
+:::
+
+**Traps**
+
+:::: compare Forgetting the half
+::: wrong
+C in [S=C=N]$^-$ owns all 8 bonding electrons: $4 - 0 - 8 = -4$.
+:::
+::: right
+It owns half of them: $4 - 0 - 4 = 0$.
+:::
+::::
+
+:::: compare Sum to zero
+::: wrong
+The formal charges in SCN$^-$ add to 0.
+:::
+::: right
+They add to $-1$, the ion's charge.
+:::
+::::
+
+**Optional practice.** (Multiple choice) Which OCN$^-$ structure is best?
+
+- **A.** [O=C=N]$^-$
+- **B.** [O≡C–N]$^-$
+- **C.** [O–C≡N]$^-$
+- **D.** All equal
+
+::: details 7. Answer
+**Answer: C.** Its only charge, $-1$, sits on O, the most electronegative atom; A puts it on N and B has $+1$ and $-2$.
+:::
+:::::
